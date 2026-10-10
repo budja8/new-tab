@@ -1,0 +1,12 @@
+{
+  "name": "newtab-ascii",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:js": "node --test \"tests/**/*.test.js\"",
+    "test:rust": "cargo test --manifest-path core/Cargo.toml",
+    "test": "npm run test:rust && npm run test:js",
+    "build:wasm": "wasm-pack build core --target web --release --out-dir ../extension/pkg --out-name newtab_core",
+    "check:size": "node scripts/check-size.mjs"
+  }
+}
