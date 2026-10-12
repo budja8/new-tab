@@ -8,7 +8,7 @@ import { loadSettings, saveSettings } from './src/settings.js';
 import { createKpiStore } from './src/store.js';
 import { createSysinfo } from './src/sysinfo.js';
 
-const FPS = { fire: 30, rain: 30, starfield: 30, pipes: 30, dna: 30, synthwave: 30, compile_sim: 30, pacman_install: 30, dashboard: 5, pacman: 30 };
+const FPS = { fire: 30, rain: 30, starfield: 30, pipes: 30, dna: 30, synthwave: 30, compile_sim: 30, pacman_install: 30, dashboard: 5, pacman: 30, mario: 30 };
 const MAX_FILE_BYTES = 20 * 1024 * 1024;
 const REDUCED_MOTION_WARMUP = 120;
 

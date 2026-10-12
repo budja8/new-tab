@@ -1,4 +1,4 @@
-export const MODES = ['fire', 'rain', 'starfield', 'pipes', 'dna', 'synthwave', 'compile_sim', 'pacman_install', 'dashboard', 'pacman', 'image'];
+export const MODES = ['fire', 'rain', 'starfield', 'pipes', 'dna', 'synthwave', 'compile_sim', 'pacman_install', 'dashboard', 'pacman', 'mario', 'image'];
 
 export function normalizeSettings(raw) {
   return {
