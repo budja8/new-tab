@@ -1,0 +1,73 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b0d10;
+  --fg: #d7dde4;
+  --muted: #7f8a96;
+  --accent: #ff8a3d;
+  --panel: rgba(11, 13, 16, 0.78);
+  --line: rgba(255, 255, 255, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--fg);
+  font: 13px/1.4 Consolas, "Cascadia Mono", "Courier New", monospace;
+}
+
+#bg { position: fixed; top: 0; left: 0; display: block; }
+
+/* Sin backdrop-filter: obligaría a la GPU a difuminar el canvas en cada frame. */
+#kpi, #settings {
+  position: fixed;
+  padding: 12px 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+#kpi { top: 16px; right: 16px; width: 240px; }
+#kpi[hidden] { display: none; }
+
+.stats { display: flex; gap: 16px; margin-bottom: 10px; }
+.stat { display: flex; flex-direction: column; }
+.stat-value { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { color: var(--muted); }
+
+.list h2 { margin: 10px 0 4px; font-size: 11px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.list ul { margin: 0; padding: 0; list-style: none; }
+.list li { display: flex; justify-content: space-between; gap: 8px; }
+.list .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.list .count { color: var(--muted); }
+.list .empty { margin: 0; color: var(--muted); }
+
+#gear {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 18px;
+  color: var(--fg);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+}
+#gear:hover, #gear:focus-visible { border-color: var(--accent); outline: none; }
+
+#settings { right: 16px; bottom: 60px; display: grid; gap: 10px; width: 280px; }
+#settings[hidden] { display: none; }
+#settings label { display: grid; gap: 4px; color: var(--muted); }
+#settings label.check { display: flex; align-items: center; gap: 8px; }
+#settings select, #settings input[type="file"] { color: var(--fg); font: inherit; }
+#message { min-height: 1.4em; margin: 0; color: var(--accent); }
+
+@media (max-width: 640px) {
+  #kpi { top: 8px; right: 8px; width: 200px; }
+}
