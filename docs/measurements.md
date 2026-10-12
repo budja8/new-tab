@@ -225,8 +225,73 @@ Desde 123 columnas los márgenes son iguales o difieren en 1. Entre 112 y 122 co
 
 GL y 2D dan píxeles idénticos (0/255) en todos los tamaños probados y la composición queda centrada en pantallas anchas (55 columnas a cada lado en 1904 px). A 30 FPS `dna` cuesta lo mismo que `fire` (suma 0.99×) y con la pestaña oculta ≈ 0: **el costo es aceptable**. A anchos de unos 1100 px o menos, el panel de KPI tapa parte de la cabecera y de las líneas largas del registro (el panel es translúcido).
 
-## Pendiente de medir (decisión del usuario, 2026-10-09)
+## Animaciones nuevas: `synthwave`, `compile_sim`, `pacman_install`, `dashboard`, `pacman`, `mario` (2026-10-12)
 
-El usuario pidió dejar las mediciones de rendimiento para el final. Faltan: `synthwave`, `compile_sim`, `pacman_install`, `dashboard` (5 FPS), `pacman` y `mario` (cuando se porte). Método sugerido: el mismo de `pipes` y `dna` (Chrome 154 aparte, perfil temporal nuevo por corrida, comparar contra `fire` de la misma sesión, razones y no absolutos; ver `tools/cdp-harness/README.md`), más una lectura con `Shift+Esc` en el Chrome normal del usuario. Estado del proyecto en `docs/PROJECT-STATUS.md`.
+Las mediciones se dejaron para el final por decisión del usuario. Reporte completo: [`docs/reports/measure-animations-report.txt`](reports/measure-animations-report.txt); datos crudos: [`docs/reports/data/measure-animations.json`](reports/data/measure-animations.json); capturas de cada modo en [`docs/reports/img/`](reports/img/).
 
-Tamaños al corte (2026-10-09): `.wasm` 80.1 KB de 150 KB; JS + CSS + HTML 59.8 KB de 70 KB (el tope subió de 60 a 70 KB al agregar `dashboard`).
+### Método
+
+Mismo arnés que en `pipes` y `dna` (`tools/cdp-harness/`, scripts `measure-anim.mjs`, `analyze.mjs` y `verify-anim.mjs`): Chrome **155** aparte con perfil temporal nuevo por corrida, extensión real cargada con `Extensions.loadUnpacked`, página de 1904×928 a dpr 1 (cuadrícula 211×58), 8 s de calentamiento y ventanas de 10 s, CPU en % de un núcleo. Tres corridas intercaladas con el orden rotado y `fire` en cada una, para comparar contra `fire` de la misma sesión (el arnés infla los absolutos; las conclusiones usan razones).
+
+### Resultados (CPU % de un núcleo, media y rango)
+
+| Modo | Ventanas | Pestaña | GPU | Suma | Razón vs `fire` (pestaña / GPU / suma) | Pasos/s | Memoria privada pestaña / GPU |
+|---|---|---|---|---|---|---|---|
+| `fire` (control) | 12 | 8.8 (7.9-10.1) | 10.6 (9.5-11.9) | 19.4 (17.4-22.0) | 1.00 | 30.0 | 34-35 MB / 116-134 MB |
+| `synthwave` | 9 | 7.9 (6.4-10.9) | 11.3 (8.3-16.2) | 19.2 (15.1-27.1) | 0.90 / 1.06 / **0.99** | 30.0 | 33-36 MB / 122-141 MB |
+| `compile_sim` | 12 | 6.5 (5.8-7.9) | 7.2 (5.7-9.3) | 13.7 (11.8-16.3) | 0.74 / 0.68 / **0.71** | 30.0 | 33-38 MB / 124-136 MB |
+| `pacman_install` | 12 | 6.7 (5.4-8.0) | 8.3 (4.8-12.6) | 15.0 (10.2-20.6) | 0.76 / 0.78 / **0.77** | 30.0 | 36-37 MB / 125-136 MB |
+| `dashboard` (5 FPS) | 9 | 4.7 (4.3-5.2) | 3.0 (2.8-3.4) | 7.8 (7.1-8.5) | 0.54 / 0.29 / **0.40** | 5.0 | 33-35 MB / 130-135 MB |
+| `pacman` | 12 | 7.0 (5.5-8.9) | 8.2 (6.1-10.1) | 15.2 (11.6-18.9) | 0.79 / 0.77 / **0.78** | 29.6 | 34-39 MB / 119-139 MB |
+| `mario` | 12 | 7.1 (5.9-8.2) | 10.5 (9.3-11.1) | 17.6 (15.2-19.2) | 0.81 / 1.00 / **0.91** | 30.0 | 34-39 MB / 121-139 MB |
+
+- **Ninguna cuesta más que `fire`** y ninguna necesita bajar de FPS. `dashboard` es la más barata (0.40× la suma de `fire`); `synthwave` es la más cara, igual que `fire`.
+- Tiempo de tareas / script de la página: `fire` 6.8 % / 3.5 %; `synthwave` 5.0 / 1.7; `compile_sim` 4.1 / 1.4; `pacman_install` 4.3 / 1.4; `dashboard` 3.0 / 0.7; `pacman` 4.7 / 2.1; `mario` 4.8 / 1.6.
+- `pacman_install` alterna ventanas de ~10-12 % y de ~17-21 % (la fase de descarga redibuja más). `synthwave` tuvo una ventana puntual de 27.1 %.
+- No se descartó ninguna ventana. Dos tuvieron una caída parcial de pasos/s (pacman en la corrida 1: 25.7; `dashboard` sin IPC en la corrida 3: 4.3) y se dejaron incluidas; quitarlas mueve las razones como mucho 0.015.
+- `requestAnimationFrame` corre a ~60/s en todos los modos, aunque la animación avance a 30 o 5 pasos/s (el limitador descarta los frames sobrantes). La memoria de GPU crece a lo largo de cada corrida y no se puede atribuir a un modo.
+
+### Con la pestaña oculta
+
+| Modo | Pestaña % | GPU % | Pasos/s | rAF/s | Llamadas a `chrome.system.cpu.getInfo` en 10 s |
+|---|---|---|---|---|---|
+| `pacman` | 0.02 / 0.01 | 0.23 / 0.01 | 0 | 0 | 0 |
+| `mario` | 0.04 / 0.01 | 0.17 / 0.01 | 0 | 0 | 0 |
+| `dashboard` | 0.04 / 0.02 | 0.18 / 0.02 | 0 | 0 | 0 (también 0 en `memory` y `storage`) |
+
+Con `dashboard` visible hubo 10 llamadas por ventana de 10 s (una por segundo); oculta no hay ninguna: el temporizador de muestreo se detiene.
+
+### `dashboard`: datos reales
+
+Leídos de las celdas del motor en la página real: `RAM [...] 60.6%  9.5 GB / 15.7 GB`, `DISK   456.6 GB total`, `CPU0` a `CPU11` con su porcentaje por núcleo y el panel BROWSER (Chrome 155, OS Windows, Cores 12, heap, red, batería, idioma). El costo del muestreo de `chrome.system.*` no se puede aislar con este arnés (7.8 con IPC frente a 7.0 sin IPC en la suma, pero 8.6 frente a 9.0 sumando todos los procesos: en sentidos opuestos); la latencia es de 2.5 ms por llamada. El costo de `dashboard` viene sobre todo del bucle `rAF` a 60/s.
+
+### Fidelidad (comparación píxel a píxel GL vs 2D)
+
+Con el `Engine` real (semilla 12345, `set_fps(30)`), el mismo buffer en ambos renderers, también tras `invalidate()` y con una prueba sintética que pinta todas las combinaciones (glifo, color de texto, fondo) vistas más los glifos exigidos:
+
+| Modo | Frames | Puntos de control (211×58) | Diferencia máx. por canal | Píxeles > 2/255 | Sintético (combinaciones / máx.) |
+|---|---|---|---|---|---|
+| `synthwave` | 600 | 15 | 0 | 0 | 38 / 0 |
+| `compile_sim` | 1800 | 36 | 0 | 0 | 254 / 0 |
+| `pacman_install` | 1500 | 32 | 0 | 0 | 203 / 0 |
+| `dashboard` (datos fijos) | 400 | 11 | 0 | 0 | 137 / 0 |
+| `pacman` | 1500 | 33 | 0 | 0 | 155 / 0 |
+| `mario` | 1500 | 33 | **1** | 0 | 340 / 1 |
+
+A 40×20 los resultados son idénticos. `pacman`: `ᗤ ᗢ ᗧ ᗣ ᗛ ⍛` aparecen y dan 0/255. `mario`: `▄ ▀ █ ░ ◢ ◣` dan 1/255 en celdas con fondo (cielo `#5c94fc`, suelo `#c84c0c`, negro): redondeo de la mezcla glifo/fondo, dentro de lo esperado.
+
+Consola: en las 33 cargas solo `[newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics …))`; sin errores ni excepciones.
+
+### Observaciones
+
+- El panel de KPI tapa `WORLD 1-1` en `mario`, y la línea `POWER` y parte del laberinto en `pacman` (cosmético; el usuario ya decidió no tocar la opacidad de los paneles).
+- Posible mejora, no aplicada: `dashboard` mantiene `rAF` a 60/s para pintar 5 frames por segundo; un temporizador a 5 Hz bajaría algo más la pestaña.
+- Quedan perfiles temporales de Chrome en `C:\ntmeas` que Windows no dejó borrar (basura segura de borrar a mano).
+
+### Tamaños al corte (2026-10-12)
+
+`.wasm` 87.8 KB de 150 KB (con `mario`); JS + CSS + HTML 59.9 KB de 70 KB (el tope subió de 60 a 70 KB al agregar `dashboard`).
+
+### Conclusión
+
+Las seis animaciones nuevas cuestan entre 0.40× y 0.99× lo que `fire` (suma pestaña + GPU) con el mismo renderer, todas se detienen con la pestaña oculta, GL y 2D coinciden (máx. 1/255) y la consola no muestra errores. Con `fire` en 8.8 % de un núcleo en el Administrador de tareas del usuario, las demás deberían quedar por debajo.
