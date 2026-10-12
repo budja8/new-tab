@@ -4,7 +4,7 @@
 
 use wasm_bindgen::prelude::*;
 
-use crate::animation::{compile_sim::CompileSimAnimation, dashboard::DashboardAnimation, dna::DnaAnimation, fire::FireAnimation, pacman::PacmanAnimation, pacman_install::PacmanInstallAnimation, pipes::PipesAnimation, rain::RainAnimation, starfield::StarfieldAnimation, synthwave::SynthwaveAnimation, Animation};
+use crate::animation::{compile_sim::CompileSimAnimation, dashboard::DashboardAnimation, dna::DnaAnimation, fire::FireAnimation, mario::MarioAnimation, pacman::PacmanAnimation, pacman_install::PacmanInstallAnimation, pipes::PipesAnimation, rain::RainAnimation, starfield::StarfieldAnimation, synthwave::SynthwaveAnimation, Animation};
 use crate::ascii::{self, packed_glyph, PACKED_STRIDE};
 use crate::grid::{Grid, CELL_STRIDE, NO_COLOR};
 
@@ -47,7 +47,7 @@ impl Engine {
         }
     }
 
-    /// Activa `fire`, `rain`, `starfield`, `pipes`, `dna`, `synthwave`, `compile_sim`, `pacman_install`, `pacman` o `dashboard`. Devuelve `false` si el nombre no existe.
+    /// Activa `fire`, `rain`, `starfield`, `pipes`, `dna`, `synthwave`, `compile_sim`, `pacman_install`, `pacman`, `mario` o `dashboard`. Devuelve `false` si el nombre no existe.
     pub fn set_animation(&mut self, name: &str) -> bool {
         let (w, h) = (self.grid.width(), self.grid.height());
         let mut anim: Box<dyn Animation> = match name {
@@ -60,6 +60,7 @@ impl Engine {
             "compile_sim" => Box::new(CompileSimAnimation::new(w, h, self.seed)),
             "pacman_install" => Box::new(PacmanInstallAnimation::new(w, h, self.seed)),
             "pacman" => Box::new(PacmanAnimation::new(w, h, self.seed)),
+            "mario" => Box::new(MarioAnimation::new(w, h, self.seed)),
             "dashboard" => Box::new(DashboardAnimation::new()),
             _ => return false,
         };
@@ -229,6 +230,7 @@ mod tests {
         assert!(e.set_animation("compile_sim"));
         assert!(e.set_animation("pacman_install"));
         assert!(e.set_animation("pacman"));
+        assert!(e.set_animation("mario"));
         assert!(e.set_animation("dashboard"));
     }
 
@@ -365,6 +367,22 @@ C: d");
     }
 
     #[test]
+    fn switching_between_mario_and_other_animations_keeps_the_buffer_valid() {
+        let mut e = Engine::new(1, 80, 24);
+        for name in ["pacman", "mario", "fire", "mario"] {
+            assert!(e.set_animation(name));
+            e.set_fps(60);
+            for _ in 0..20 {
+                e.step();
+            }
+            assert_eq!(e.cells_len(), 80 * 24 * CELL_STRIDE);
+        }
+        e.resize(15, 9);
+        e.step();
+        assert_eq!(e.cells_len(), 15 * 9 * CELL_STRIDE);
+    }
+
+    #[test]
     fn zero_sized_engine_never_panics() {
         let mut e = Engine::new(1, 0, 0);
         assert!(e.set_animation("rain"));
@@ -390,6 +408,10 @@ C: d");
             e.step();
         }
         assert!(e.set_animation("pacman"));
+        for _ in 0..10 {
+            e.step();
+        }
+        assert!(e.set_animation("mario"));
         for _ in 0..10 {
             e.step();
         }
