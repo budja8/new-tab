@@ -1,0 +1,11 @@
+# Generados
+node_modules/
+core/target/
+extension/pkg/
+
+# Perfiles temporales del arnés de medición
+nt*/
+
+# Sistema
+.DS_Store
+Thumbs.db
