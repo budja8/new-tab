@@ -23,7 +23,7 @@ La lógica reutilizada de Rust se compila a **WebAssembly**. La página debe ser
 
 ### Incluido (v1)
 
-- Animaciones `fire`, `rain`, `starfield`, `pipes` ("Tuberías", agregada el 2026-10-09), `dna` ("ADN", agregada el 2026-10-09), `synthwave` ("Synthwave"), `compile_sim` ("Compilación"), `pacman_install` ("Instalación (pacman)"), `dashboard` ("Panel de sistema") y `pacman` ("Pac-Man"), todas agregadas el 2026-10-09, portadas desde `refs/cwork/src/animation/`.
+- Animaciones `fire`, `rain`, `starfield`, `pipes` ("Tuberías", agregada el 2026-10-09), `dna` ("ADN", agregada el 2026-10-09), `synthwave` ("Synthwave"), `compile_sim` ("Compilación"), `pacman_install` ("Instalación (pacman)"), `dashboard` ("Panel de sistema"), `pacman` ("Pac-Man") y `mario` ("Mario"), todas agregadas el 2026-10-09, portadas desde `refs/cwork/src/animation/`.
 - Una imagen cargada por el usuario, convertida a ASCII.
 - Panel de KPI: total de teclas del día, WPM, top 5 teclas, atajos más frecuentes y teclas por sitio.
 - Selector de modo de fondo (ajuste simple) y atajo para ocultar el panel.
@@ -32,7 +32,7 @@ La lógica reutilizada de Rust se compila a **WebAssembly**. La página debe ser
 
 - Estadísticas de todo el sistema (fase posterior; ver sección 9).
 - Heatmap de teclado e histórico visual.
-- Las otras animaciones de cwork (`mario`). Se agregan de a poco midiendo cada una (`pipes` y `dna` ya se portaron el 2026-10-09).
+- Ninguna animación de cwork queda sin portar (las 10 están). Las mediciones de las últimas seis quedan pendientes por decisión del usuario.
 - Partículas reactivas al audio (`particles` de rust-ascii).
 
 ## 3. Decisiones tomadas
@@ -63,7 +63,7 @@ Estas cifras son el piso del cálculo en Rust. El costo en Chrome incluye el com
 ```
 new-tab/
 ├── core/                  # crate Rust → WASM
-│   └── src/ { lib.rs, rng.rs, grid.rs, ascii.rs, engine.rs, animation/{fire,rain,starfield,pipes,dna,synthwave,compile_sim,pacman_install,dashboard,pacman}.rs }
+│   └── src/ { lib.rs, rng.rs, grid.rs, ascii.rs, engine.rs, animation/{fire,rain,starfield,pipes,dna,synthwave,compile_sim,pacman_install,dashboard,pacman,mario}.rs }
 ├── extension/             # lo que se carga en Chrome (sin core/target)
 │   ├── manifest.json
 │   ├── newtab.html / newtab.js / newtab.css
@@ -83,7 +83,7 @@ Rust es dueño del **estado y la lógica** (animaciones y conversión de imagen)
 
 Funciones expuestas por el crate:
 
-- `Engine::new(seed, w, h)` y `set_animation(nombre)`: crea el motor y elige `fire`, `rain`, `starfield`, `pipes`, `dna`, `synthwave`, `compile_sim`, `pacman_install`, `dashboard` o `pacman`; `set_fps(fps)` le pasa el FPS objetivo (lo usa `pipes` para medir su pausa en segundos).
+- `Engine::new(seed, w, h)` y `set_animation(nombre)`: crea el motor y elige `fire`, `rain`, `starfield`, `pipes`, `dna`, `synthwave`, `compile_sim`, `pacman_install`, `dashboard`, `pacman` o `mario`; `set_fps(fps)` le pasa el FPS objetivo (lo usa `pipes` para medir su pausa en segundos).
 - `step()`: avanza un frame.
 - `cells_ptr()` / `cells_len()`: buffer plano en memoria compartida, `[carácter, fg, bg]` por celda (`u32`), sin serializar por frame.
 - `image_target_dims(src_w, src_h, max_w, max_h)` e `image_to_ascii(rgba, w, h, invert)`: JS reduce la imagen y Rust la convierte a celdas empaquetadas (`[índice, r, g, b]`, 4 bytes por celda). `load_image()` la muestra, centrada y reducida si no cabe.
@@ -121,7 +121,7 @@ requestAnimationFrame → ¿toca frame? (limitador por FPS objetivo)
 ### Controles de consumo
 
 - Pausa total con `visibilitychange`: se cancela el `requestAnimationFrame` si la pestaña no está visible.
-- FPS objetivo: `fire` 30, `rain` 30, `starfield` 30 (bajó de 60 a 30 con el renderer WebGL2, 2026-10-09), `pipes` 30 (arrancó en 60 el 2026-10-09 y el usuario lo bajó a 30 el mismo día por el consumo; ver `docs/measurements.md`), `dna` 30 (2026-10-09), `synthwave` 30, `compile_sim` 30, `pacman_install` 30, `pacman` 30, `dashboard` 5 (2026-10-09; nada se mueve de forma fluida, el reloj y las barras cambian 1 vez por segundo). Se ajustan con mediciones.
+- FPS objetivo: `fire` 30, `rain` 30, `starfield` 30 (bajó de 60 a 30 con el renderer WebGL2, 2026-10-09), `pipes` 30 (arrancó en 60 el 2026-10-09 y el usuario lo bajó a 30 el mismo día por el consumo; ver `docs/measurements.md`), `dna` 30 (2026-10-09), `synthwave` 30, `compile_sim` 30, `pacman_install` 30, `pacman` 30, `mario` 30, `dashboard` 5 (2026-10-09; nada se mueve de forma fluida, el reloj y las barras cambian 1 vez por segundo). Se ajustan con mediciones.
 - `pipes`: 4 tuberías de colores dejan un rastro de glifos de caja (`║ ═ ╔ ╗ ╚ ╝`, `●` al nacer) hasta llenar el 80 % de las celdas; entonces el dibujo se queda quieto 4 segundos y se limpia para empezar de nuevo. La pausa se mide en segundos a partir del FPS objetivo (`Engine::set_fps(fps)` → `fps × 4` frames), así dura lo mismo a 60 que a 30 FPS.
 - `dna`: una doble hélice 3D que gira (dos hebras de `●` verde y magenta en el lado cercano y `o` atenuada en el lejano, con puentes `─` cada 3 filas que alternan cian y amarillo) y, a su derecha, un registro "GENETIC SEQUENCING DATABASE" que suma una línea cada 25 frames (un 5 % son líneas rojas de mutación) y conserva las últimas `alto − 6`. En cuadrículas de más de 55 columnas la composición hélice + registro (101 columnas) se **centra horizontalmente** (desplazamiento `max(0, (ancho − 101)/2 − 11)`; 44 columnas en 211); en cuadrículas de menos de 112 columnas el registro (columnas 42 a 111) se recorta por la derecha, como en la versión original en una terminal angosta, y con 55 columnas o menos solo se dibuja la hélice, centrada.
 - `synthwave`: escena retro en capas (sol con franjas y degradado rojo→dorado sobre el horizonte al 46 % de la altura, cuadrícula morada en perspectiva con 7 líneas `═` y 15 radiales `│╲╱`, tres ondas violeta/magenta/cian y el título `** SYNTHWAVE HORIZON **` en ASCII). Solo depende del contador de frames (sin azar). Aritmética `i32`, fase de las ondas en `f64`. Sin medir aún: el usuario dejó las mediciones de rendimiento para el final.
@@ -129,6 +129,7 @@ requestAnimationFrame → ¿toca frame? (limitador por FPS objetivo)
 - `pacman_install`: simulación de `pacman -Syu` (sincroniza bases, lista 9 paquetes, prompt, hasta 2 descargas en paralelo con velocidad aleatoria, 4 comprobaciones, 9 actualizaciones con barra, hooks, Finished; pausa 2 s y reinicia). Igual que `compile_sim`: ritmo de 60 ticks por segundo con `set_fps`, bloque centrado (BLOCK_W 77), números con decimales formateados con enteros. Desviación: la línea `Packages (9) …` (~185 columnas) se parte en 3 líneas de log (≤ 77 columnas) como hace pacman real. Sin medir aún.
 - `dashboard`: reloj grande HH:MM:SS, barras de RAM y disco, una barra por núcleo de CPU (hasta 16, dos columnas con ancho > 70 y ≥ 4 núcleos) y un panel BROWSER (versión de Chrome, SO, núcleos, memoria JS, red, batería, idioma) en lugar de la tabla de procesos de la original (`chrome.processes` no existe en Chrome estable). Los datos son del navegador, no simulados: `extension/src/sysinfo.js` muestrea cada 1 s (solo con el modo activo y la pestaña visible) `chrome.system.cpu/memory/storage` (permisos nuevos en el manifest) y los pasa al WASM con `Engine::feed(Float32Array)` (layout: hora, min, seg, RAM usada/total GB, disco usado/total GB, N núcleos, cargas 0..1) y `Engine::feed_text(string)` (líneas "Etiqueta: valor", máx. 12 de 80 caracteres); `Animation` ganó `feed`/`feed_text` con implementación vacía por defecto. Datos saneados (NaN, negativos, slice corto). Desde 2026-10-09 la barra DISK no se muestra en escritorio: `chrome.system.storage.getAvailableCapacity` solo existe en ChromeOS, así que no hay espacio libre; bajo la barra de RAM se dibuja la fila `DISK  456.6 GB total` (solo capacidad, sin barra ni porcentaje; JS suma las unidades `fixed` sin duplicar las de igual tamaño y pasa el total en `feed[6]` con usado = 0) y, si falta `chrome.system` (extensión no recargada tras agregar permisos), la línea `System: reload the extension`. Sin formato de float (décimas con enteros). Sin medir aún.
 - `pacman`: Pac-Man con piloto automático (laberinto de bloques aleatorios sin celdas selladas, puntos y energizantes, 4 fantasmas con objetivos distintos, vidas, niveles, puntaje). Mantiene el ritmo original de 60 ticks por segundo con `set_fps`. Desviaciones: el energizante baja por movimiento (dura 6 s reales, como dice el original y su HUD; la original lo bajaba por tick y duraba 1 s), salvaguarda que pasa de nivel tras 90 s sin comer, tamaño mínimo 12×10 (por debajo solo HUD), título/pie sin emoji (`RETRO PAC-MAN ARCADE` / `AUTOPILOT RUNNING`), los fantasmas nunca entran en muros. Los símbolos `ᗤ ᗢ ᗧ ᗣ ᗛ ⍛` están en una sola tabla (`GLYPHS`) por si hay que pasar a ASCII. Sin medir aún.
+- `mario`: runner lateral estilo NES con piloto automático (cielo, nubes y arbustos en paralaje, suelo de ladrillos, tuberías, goombas, bloques `?` que sueltan monedas; HUD `MARIO 000000`, `● x00`, `WORLD  1-1`). Ritmo original de 60 ticks/s con `set_fps`. Desviaciones: golpe de bloque por cruce de fila (la original exige igualdad exacta y a veces se la salta), y el primer trío tubería/bloque/goomba se sortea en cada reinicio (distancias `w+10..30`, `w+15..45`, `w+25..80`): con el trío fijo del original Mario moría siempre en el primer goomba y la escena se repetía cada ~4 s (~75 muertes en 300 s; ahora ~17, con golpes de bloque y pisotones). Tamaño mínimo 20×12, vectores acotados, pie y HUD sin emoji. Sin medir aún.
 - Respeto a `prefers-reduced-motion`: se muestra un frame estático.
 - Sin timers sueltos: el panel de KPI se actualiza por eventos, no por polling.
 
