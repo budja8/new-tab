@@ -1,0 +1,121 @@
+MEDICIÓN DE LAS ANIMACIONES NUEVAS (synthwave, compile_sim, pacman_install, dashboard, pacman, mario)
+Fecha: 2026-10-12. Máquina del usuario: Windows 11, 12 núcleos, Intel UHD (ANGLE D3D11, driver 32.0.101.7085). Chrome 155 instalado.
+No se modificó extension/, core/ ni tests/. extension/pkg/ se usó tal cual (sin reconstruir).
+Datos crudos: docs/reports/data/measure-animations.json. Capturas: docs/reports/img/.
+
+1. MÉTODO
+- Arnés CDP derivado de tools/cdp-harness/lib2.mjs + measure-dna.mjs (scripts en el scratchpad de la sesión, carpeta meas/:
+  measure-anim.mjs, analyze.mjs, verify-anim.mjs, vext/verify.html + verify.js).
+- Chrome headful con --remote-debugging-pipe --enable-unsafe-extension-debugging, perfil NUEVO por corrida en C:/ntmeas/,
+  extensión cargada desde la carpeta extension/ real con Extensions.loadUnpacked. Ventana 1920x1080 en el monitor secundario
+  -> página 1904x928, dpr 1, canvas 1899x928 (211x58 celdas), pestaña visible y al frente.
+- Cada modo se abre en una pestaña nueva instrumentada desde fuera (addScriptToEvaluateOnNewDocument: cuenta engine_step y rAF,
+  y envuelve chrome.system.{cpu,memory,storage}.getInfo para contar llamadas); el modo se escribe en chrome.storage.local
+  {settings:{mode, kpiVisible:true}} y se recarga la página.
+- 8 s de calentamiento y ventanas de 10 s. CPU = delta de cpuTime de SystemInfo.getProcessInfo en % de UN núcleo: pestaña =
+  renderer más activo, GPU = proceso GPU, suma = pestaña+GPU; "todos" = todos los procesos de ese Chrome.
+  Task%/Script% = Performance.getMetrics (TaskDuration/ScriptDuration) por segundo.
+- 3 corridas (Chrome nuevo cada una) con orden rotado; fire en todas:
+  M1 fire,synthwave,compile_sim,pacman_install,dashboard,dashNoIpc,pacman,mario
+  M2 pacman,mario,fire,dashNoIpc,dashboard,synthwave,compile_sim,pacman_install
+  M3 mario,pacman_install,dashboard,dashNoIpc,compile_sim,fire,pacman,synthwave
+  Ventanas por corrida: fire 4, synthwave 3, dashboard 3, dashNoIpc 3, compile_sim/pacman_install/pacman/mario 4 (t = 11-51 s
+  de página, cubre varias fases). Total: fire 12, synthwave 9, dashboard 9, dashNoIpc 9, resto 12.
+- dashNoIpc = dashboard con las respuestas de chrome.system.*.getInfo servidas desde caché tras la primera (instrumentación externa,
+  sin tocar el código) para aislar el costo del muestreo IPC.
+- Razón vs fire = media de la corrida del modo / media de fire de la MISMA corrida; se reporta la media de las 3 razones.
+- Una corrida aparte (S1) para capturas, oculta y lectura de celdas del dashboard; otra (V) para la fidelidad.
+
+2. RESULTADOS CPU (% de un núcleo; media (min-max) de ventanas válidas)
+Modo           | n  | pestaña         | GPU             | suma             | todos | razón vs fire pest/GPU/suma (rango suma) | pasos/s              | Task%/Script% | priv pestaña MB | priv GPU MB
+fire           | 12 | 8.8 (7.9-10.1)  | 10.6 (9.5-11.9) | 19.4 (17.4-22.0) | 20.9  | 1.00 / 1.00 / 1.00                      | 30.01 (29.97-30.08)  | 6.8 / 3.5     | 33.8-35.0       | 116-134
+synthwave      |  9 | 7.9 (6.4-10.9)  | 11.3 (8.3-16.2) | 19.2 (15.1-27.1) | 19.8  | 0.90 / 1.06 / 0.99 (0.86-1.11)          | 29.98 (29.88-30.05)  | 5.0 / 1.7     | 33.0-35.7       | 122-141
+compile_sim    | 12 | 6.5 (5.8-7.9)   | 7.2 (5.7-9.3)   | 13.7 (11.8-16.3) | 15.4  | 0.74 / 0.68 / 0.71 (0.65-0.78)          | 30.01 (29.95-30.07)  | 4.1 / 1.4     | 32.9-37.5       | 124-136
+pacman_install | 12 | 6.7 (5.4-8.0)   | 8.3 (4.8-12.6)  | 15.0 (10.2-20.6) | 15.5  | 0.76 / 0.78 / 0.77 (0.74-0.83)          | 29.98 (29.66-30.08)  | 4.3 / 1.4     | 35.8-37.3       | 125-136
+dashboard      |  9 | 4.7 (4.3-5.2)   | 3.0 (2.8-3.4)   | 7.8 (7.1-8.5)    | 8.6   | 0.54 / 0.29 / 0.40 (0.39-0.41)          | 4.99 (4.99-5.00)     | 3.0 / 0.7     | 32.9-34.9       | 130-135
+dashNoIpc      |  9 | 4.4 (3.7-5.0)   | 2.6 (2.1-2.9)   | 7.0 (5.8-7.9)    | 9.0   | 0.51 / 0.24 / 0.36 (0.32-0.39)          | 4.92 (4.30-5.00)     | 2.7 / 0.7     | 32.2-36.2       | 134-139
+pacman         | 12 | 7.0 (5.5-8.9)   | 8.2 (6.1-10.1)  | 15.2 (11.6-18.9) | 16.5  | 0.79 / 0.77 / 0.78 (0.73-0.86)          | 29.64 (25.74-30.06)  | 4.7 / 2.1     | 33.9-38.5       | 119-139
+mario          | 12 | 7.1 (5.9-8.2)   | 10.5 (9.3-11.1) | 17.6 (15.2-19.2) | 19.1  | 0.81 / 1.00 / 0.91 (0.80-0.97)          | 30.00 (29.92-30.07)  | 4.8 / 1.6     | 34.1-38.5       | 121-139
+rAF: 59.4-60.1/s en todas las ventanas salvo las dos citadas abajo. Proceso browser: 0.5-1.8 % (ruido; sin relación con el modo).
+Memoria privada (Get-Process tras la última ventana de cada modo): pestaña 32-39 MB en todos los modos (fire 34-35); GPU 116-141 MB,
+crece un poco a lo largo de la corrida (proceso GPU compartido por las pestañas abiertas y cerradas en serie), no es atribuible al modo.
+
+Valores crudos por corrida (pestaña/GPU/suma): ver sección "runs" del JSON. Medias por corrida de fire: M1 8.4/10.8/19.2,
+M2 8.3/9.8/18.1, M3 9.7/11.2/20.9 (deriva del arnés entre corridas ~15 %).
+
+Ventanas descartadas: ninguna (ninguna con 0 pasos/s o 0 rAF/s). Dos ventanas válidas con caída parcial (causa externa probable,
+la máquina estaba en uso): M1 pacman w2 25.7 pasos/s, 51 rAF/s (11.6 de suma, la más baja de pacman); M3 dashNoIpc w2 4.3 pasos/s,
+48 rAF/s. Se dejaron incluidas; excluirlas no cambia las razones en más de 0.02.
+
+Variación dentro de cada modo (fases):
+- synthwave: M1 tuvo una ventana de 27.1 (GPU 16.2) con t 21-31 s; el resto 15.1-21.2. Razón por corrida 0.88 / 0.86 / 1.11 (suma).
+- pacman_install: alterna ventanas ~10-12 (fase de texto/espera) y ~17-21 (fase de barras de descarga), en las 3 corridas.
+- compile_sim: 11.8-16.3, sube algo en la última ventana (t 41-51 s, el log lleno y desplazándose).
+- pacman: 11.6-18.9; mario: 15.2-19.2 estable (el GPU de mario, 10.5, es igual al de fire: cielo con fondo de color en toda la pantalla).
+
+3. PESTAÑA OCULTA (corrida S1; segunda pestaña about:blank al frente; visibilityState visible -> hidden confirmado; 2 ventanas de 10 s)
+Modo      | pestaña %   | GPU %       | pasos/s | rAF/s | llamadas cpu.getInfo en 10 s oculta | mem priv pestaña MB
+pacman    | 0.02 / 0.01 | 0.23 / 0.01 | 0 / 0   | 0 / 0 | 0 / 0                               | 36.8
+mario     | 0.04 / 0.01 | 0.17 / 0.01 | 0 / 0   | 0 / 0 | 0 / 0                               | 36.1
+dashboard | 0.04 / 0.02 | 0.18 / 0.02 | 0 / 0   | 0 / 0 | 0 / 0 (memory 0, storage 0)         | 38.5
+Dashboard visible antes de ocultar: 6 llamadas a cpu/memory/storage.getInfo en los ~5.5 s desde la carga (1/s); oculta: 0 -> el
+setInterval de 1 s se detiene. (GPU 0.2 en la 1.ª ventana = el cambio de pestaña; la 2.ª ventana ya es ~0.)
+
+4. DASHBOARD
+- Datos reales en las celdas del motor (leídas del buffer de WASM en la página real, corrida S1):
+  reloj ASCII grande, "RAM   [██████████--------]  60.6%  9.5 GB / 15.7 GB", "DISK   456.6 GB total",
+  CPU0..CPU11 con barra y % por núcleo (15.6 %, 10.9 %, ... valores reales), panel BROWSER: Chrome 155, OS Windows, Cores 12,
+  JS heap 3 / 4192 MB, Network 4g 1.7 Mbps 50 ms, Battery 73 % (discharging), Language es-ES. Captura: img/dashboard.png.
+- Muestreo: 10 llamadas a cada getInfo por ventana de 10 s en las 9 ventanas (1/s exacto); latencia asíncrona media 2.5 ms por llamada.
+- Costo del muestreo: dashboard 7.8 de suma vs dashNoIpc (mismo modo, respuestas en caché) 7.0; "todos los procesos" 8.6 vs 9.0.
+  La diferencia (~0.5-0.8 % de un núcleo, en sentidos opuestos según la métrica) está dentro del ruido: el muestreo de chrome.system
+  a 1 Hz no tiene un costo medible con este arnés. El costo del dashboard es casi todo el bucle rAF (60 rAF/s aunque solo pinte 5/s)
+  y el pintado del panel.
+
+5. FIDELIDAD GL vs 2D (Engine real, semilla 12345, set_fps(30), mismo buffer a GlRenderer y Renderer reales, dpr 1, celda 9x16)
+Checkpoints: frames 0,1,2 y cada 50 + el último (si el frame no cambió, se toma el siguiente que cambie); además GL tras invalidate()
+vs 2D incremental en el último frame, y una prueba sintética que pinta cada combinación (glifo, fg, bg) vista en la corrida y los
+glifos exigidos con todos los fg (y bg) vistos. Dashboard alimentado con feed/feed_text fijos (hora que avanza, 12 núcleos con carga
+sinusoidal, RAM 9.5/15.7, DISK 456.6 GB total).
+Modo           | cuadrícula | frames | checkpoints | máx dif/canal | px > 2/255 | tras invalidate | sintético (combos / máx / px>2)
+synthwave      | 211x58     |  600   | 15          | 0             | 0          | 0               | 38 / 0 / 0
+compile_sim    | 211x58     | 1800   | 36          | 0             | 0          | 0               | 254 / 0 / 0
+pacman_install | 211x58     | 1500   | 32          | 0             | 0          | 0               | 203 / 0 / 0
+dashboard      | 211x58     |  400   | 11          | 0             | 0          | 0               | 137 / 0 / 0
+pacman         | 211x58     | 1500   | 33          | 0             | 0          | 0               | 155 / 0 / 0
+mario          | 211x58     | 1500   | 33          | 1             | 0          | 1               | 340 / 1 / 0
+(40x20: los mismos resultados en los 6 modos: 0/255 salvo mario 1/255, 0 px > 2; sintético 28-334 combos, máx 0 o 1 en mario.)
+- pacman: aparecieron en la corrida y se verificaron ᗤ U+15E4, ᗢ U+15E2, ᗧ U+15E7, ᗣ U+15E3, ᗛ U+15DB, ⍛ U+235B (y · ═ █ ●): 0/255.
+- mario: ▄ ▀ █ ░ ◢ ◣ (y │ ║ ●) con fondos #5c94fc (cielo), #c84c0c (suelo), #000000: máx 1/255 (2873 px con dif. 1 en un frame
+  de 211x58), 0 px > 2/255. Es el redondeo de la mezcla glifo/fondo (mix en el shader vs composición source-over del 2D) en celdas
+  con bg ≠ 0; dentro de lo esperado.
+- Otros glifos no ASCII: synthwave ─ │ ═ ╱ ╲ █; compile_sim █; dashboard ═ █ ■. Consola de la página de verificación: limpia.
+
+6. CAPTURAS (Page.captureScreenshot PNG, 1904x928, a los ~6 s y ~20 s; todas ≤ 102 KB)
+docs/reports/img/: synthwave.png, synthwave-2.png, compile_sim.png, compile_sim-2.png, pacman_install.png, pacman_install-2.png,
+dashboard.png, dashboard-2.png, pacman.png, pacman-2.png, mario.png, mario-2.png.
+Observaciones visuales: todas se ven correctas. El panel de KPI (arriba a la derecha) tapa en mario el texto "WORLD 1-1" y una nube,
+y en pacman la línea "POWER" bajo SCORE y parte del laberinto; en el resto no tapa contenido.
+
+7. ERRORES DE CONSOLA
+En las 32 cargas medidas (8 modos x 3 corridas + 9 en S1) la consola solo imprimió
+"info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))";
+0 errores, 0 excepciones, 0 entradas de Log.
+
+8. OBSERVACIONES / ANOMALÍAS
+- El Chrome instalado es 155 (no 154).
+- Cifras absolutas: fire de esta sesión 8.8/10.6/19.4 (en la sesión de dna era 7.0/8.9/15.8): usar solo las razones.
+- La ventana más alta de synthwave (27.1) y los picos de pacman_install coinciden con fases de la animación, no con causas externas.
+- Perfiles C:\ntmeas\M1-h0gzd, M2-h97xc, M3-hhyz7, S1-gum5r no se pudieron borrar (borrado bloqueado); son basura segura de
+  borrar a mano. El de verificación (V-hqunr) sí se borró. 0 procesos chrome.exe con "ntmeas" al terminar; el Chrome del usuario
+  no se tocó.
+
+9. CONCLUSIÓN POR ANIMACIÓN (razón suma vs fire de la misma sesión)
+- synthwave: 0.99x (igual que fire; ventanas puntuales más altas en GPU). No requiere bajar FPS.
+- compile_sim: 0.71x (más barato que fire). No requiere bajar FPS.
+- pacman_install: 0.77x (más barato; alterna fases baratas y caras). No requiere bajar FPS.
+- dashboard: 0.40x a 5 FPS; el muestreo de chrome.system (1 Hz) no tiene costo medible y se detiene oculto. Bien así.
+  (Posible mejora no pedida: el bucle rAF sigue a 60/s para pintar 5/s; un setTimeout a 5 Hz bajaría algo más la pestaña.)
+- pacman: 0.78x (más barato). No requiere bajar FPS.
+- mario: 0.91x (pestaña 0.81x, GPU 1.00x por el cielo de color a pantalla completa). No requiere bajar FPS.
+Ninguna cuesta más que fire; todas paran por completo con la pestaña oculta (0 pasos, 0 rAF, ~0 % CPU); GL = 2D (≤ 1/255).
