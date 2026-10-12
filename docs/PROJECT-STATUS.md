@@ -19,12 +19,12 @@ Restricción principal del usuario: **tiene que ser eficiente** (poca CPU, RAM y
 
 | Cosa | Valor |
 |---|---|
-| Pruebas Rust (`cargo test`) | 205 pasan |
-| Pruebas JS (`node --test`) | 121 pasan |
-| `.wasm` | 80.1 KB (tope 150 KB) |
-| JS + CSS + HTML (incluye el glue de `pkg/`) | 59.8 KB (tope **70 KB**) |
-| Modos disponibles | `fire`, `rain`, `starfield`, `pipes`, `dna`, `synthwave`, `compile_sim`, `pacman_install`, `dashboard`, `pacman`, `image` |
-| Sin portar de cwork | `mario` (diseño ya presentado, ver sección 5) |
+| Pruebas Rust (`cargo test`) | 249 pasan |
+| Pruebas JS (`node --test`) | 123 pasan |
+| `.wasm` | 87.8 KB (tope 150 KB) |
+| JS + CSS + HTML (incluye el glue de `pkg/`) | 59.9 KB (tope **70 KB**) |
+| Modos disponibles | `fire`, `rain`, `starfield`, `pipes`, `dna`, `synthwave`, `compile_sim`, `pacman_install`, `dashboard`, `pacman`, `mario`, `image` |
+| Sin portar de cwork | ninguna: ya están las 10 animaciones |
 
 Cómo obtener esas cifras: `npm test` y `npm run check:size` (ver README).
 
@@ -44,6 +44,7 @@ Todos a **30 FPS**, excepto `dashboard` a **5 FPS** (decisión del usuario: nada
 | `pacman_install` | Instalación (pacman) | simulación de `pacman -Syu`; bloque centrado (77 col.); línea de paquetes partida en 3 |
 | `dashboard` | Panel de sistema | datos reales del navegador (ver sección 4); 5 FPS |
 | `pacman` | Pac-Man | piloto automático; energizante de 6 s; salvaguarda de 90 s |
+| `mario` | Mario | runner lateral con paralaje y piloto automático; el primer trío tubería/bloque/goomba se sortea en cada reinicio (ver sección 3) |
 | `image` | Imagen ASCII | imagen del usuario, guardada en IndexedDB (≤ 200×100 celdas) |
 
 ## 3. Decisiones del usuario (no reabrir sin que él lo pida)
@@ -51,7 +52,7 @@ Todos a **30 FPS**, excepto `dashboard` a **5 FPS** (decisión del usuario: nada
 Proceso y alcance:
 - **Sin commits ni `git init`** durante el desarrollo (no había repo). Al subirlo, el usuario crea el repo.
 - Trabajo en **modo con agentes** (un subagente implementa, otro revisa), con TDD, y **una animación a la vez**.
-- **Las mediciones de rendimiento de las animaciones nuevas quedan para el final** (las de `synthwave`, `compile_sim`, `pacman_install`, `dashboard` y `pacman` están pendientes; ver sección 5). Antes de `synthwave` sí se midió cada animación (`pipes`, `dna`) contra `fire` en la misma sesión.
+- **Las mediciones de las animaciones nuevas se dejaron para el final y ya se hicieron (2026-10-12).** Antes de `synthwave` sí se midió cada animación (`pipes`, `dna`) contra `fire` en la misma sesión.
 - Alcance de las estadísticas de teclas: **solo dentro de Chrome** por ahora; el sistema completo es una fase posterior.
 
 Renderer y rendimiento:
@@ -65,6 +66,7 @@ Por animación:
 - `compile_sim`, `pacman_install`: centradas como `dna`; `pacman_install` parte la línea de paquetes en varias líneas como hace pacman real.
 - `dashboard`: panel **BROWSER** en lugar de la tabla de procesos (`chrome.processes` no existe en Chrome estable); **5 FPS**; el disco se muestra como fila de solo capacidad (`DISK  456.6 GB total`) bajo la barra de RAM, sin barra (ver sección 4).
 - `pacman`: símbolos originales en una tabla `GLYPHS`; energizante de **6 s reales** (la original lo hacía durar 1 s aunque el HUD decía 6); salvaguarda: tras 90 s sin comer pasa de nivel.
+- `mario`: HUD y pie sin emoji (`● x00`, `AUTOPILOT ACTIVE | JUMPING & STOMPING`); golpe de bloque por cruce de fila; y **el primer trío (tubería, bloque, goomba) se sortea en cada reinicio** (el original lo dejaba fijo y Mario moría siempre en el primer goomba: ~75 muertes en 300 s; ahora ~17, con golpes y pisotones, y cada reinicio es una escena distinta). Decidido por el usuario: "que siempre sea un comportamiento diferente".
 - Todos los emoji de las animaciones originales se reemplazaron por ASCII (starfield, synthwave, pacman, y lo que venga).
 
 ## 4. Notas técnicas que conviene recordar
@@ -80,16 +82,10 @@ Por animación:
 
 ### Para retomar en orden
 
-1. **Verificar a ojo en Chrome las animaciones nuevas** (el usuario ya vio funcionando `dna`, `synthwave`, `compile_sim` y `dashboard` con RAM/CPU/disco; `pacman_install` no tuvo una confirmación explícita y `pacman` aún no lo ha visto):
+1. **Verificar a ojo en Chrome las animaciones nuevas** (incluida `mario`) (el usuario ya vio funcionando `dna`, `synthwave`, `compile_sim` y `dashboard` con RAM/CPU/disco; `pacman_install` no tuvo una confirmación explícita y `pacman` aún no lo ha visto):
    - `pacman`: confirmar que los símbolos `ᗤ ᗢ ᗧ ᗣ ᗛ ⍛` se ven bien con las fuentes de Windows. Si salen como cuadrados o desalineados, pasar a ASCII (`<`, `>`, `^`, `v`, `M`) cambiando solo la tabla `GLYPHS` en `core/src/animation/pacman.rs`.
-2. **`mario`** (última de cwork). El diseño ya se presentó y **está pendiente de visto bueno del usuario**:
-   - Portar `refs/cwork/src/animation/mario.rs` (runner lateral con paralaje, piloto automático, goombas, tuberías, bloques `?`, monedas).
-   - HUD sin emoji: `🪙 x00` → `● x00`; pie `AUTOPILOT ACTIVE | JUMPING & STOMPING` (sin `q`).
-   - 2 pasos lógicos por frame a 30 FPS (constantes pensadas para 60 ticks/s).
-   - Golpe al bloque `?` por cruce (la original exige igualdad exacta de fila y puede saltársela, porque Mario sube más de una fila por tick).
-   - Seguridad: `i32`, tamaño mínimo 20×12 (por debajo solo cielo y suelo), sin `u16`.
-   - Integración: archivo `core/src/animation/mario.rs`, modo `mario` ("Mario"), `MODES`, HTML, `FPS` a 30.
-3. **Mediciones finales** (decisión del usuario): medir `synthwave`, `compile_sim`, `pacman_install`, `dashboard`, `pacman` y `mario` contra `fire` de la misma sesión con el arnés de `tools/cdp-harness/`, y registrarlas en `docs/measurements.md`. Esperado: `dashboard` el más barato; `pacman` y `mario` redibujan toda la pantalla en cada frame; `synthwave` cambia pocas celdas por frame. Confirmar también con `Shift+Esc` en el Chrome del usuario.
+2. **`mario`** (última de cwork): **portada** el 2026-10-12; falta que el usuario la vea en Chrome. Detalles: 2 pasos lógicos por frame a 30 FPS, tamaño mínimo 20×12 (por debajo solo cielo y suelo), vectores acotados (128 elementos y 32 monedas), sin `u16`.
+3. **Mediciones finales**: **hechas el 2026-10-12** (ver `docs/measurements.md`, sección "Animaciones nuevas"). Ninguna de las seis cuesta más que `fire` (razón de la suma 0.40 a 0.99), todas se detienen con la pestaña oculta y GL/2D coinciden (máx. 1/255). Si se quiere, confirmar con `Shift+Esc` en el Chrome normal del usuario.
 4. **Subir el repo.** Ver "Preparar el repo" más abajo.
 
 ### Fases posteriores acordadas
