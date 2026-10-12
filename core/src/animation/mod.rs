@@ -2,6 +2,7 @@ pub mod compile_sim;
 pub mod dashboard;
 pub mod dna;
 pub mod fire;
+pub mod mario;
 pub mod pacman;
 pub mod pacman_install;
 pub mod pipes;
