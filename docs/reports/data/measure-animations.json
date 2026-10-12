@@ -1,0 +1,6131 @@
+{
+ "date": "2026-10-12",
+ "chrome": "155 (Chrome instalado del usuario, perfil nuevo por corrida)",
+ "method": {
+  "warmMs": 8000,
+  "winMs": 10000,
+  "page": "1904x928 dpr1 (ventana 1920x1080 en monitor secundario)",
+  "cpu": "SystemInfo.getProcessInfo, % de un núcleo"
+ },
+ "summary": {
+  "summary": {
+   "fire": {
+    "n": 12,
+    "tab": {
+     "mean": 8.799999999999999,
+     "min": 7.9,
+     "max": 10.05
+    },
+    "gpu": {
+     "mean": 10.601666666666667,
+     "min": 9.53,
+     "max": 11.93
+    },
+    "sum": {
+     "mean": 19.401666666666667,
+     "min": 17.43,
+     "max": 21.98
+    },
+    "all": {
+     "mean": 20.93583333333333,
+     "min": 18.16,
+     "max": 30.11
+    },
+    "browser": {
+     "mean": 1.1883333333333332,
+     "min": 0.26,
+     "max": 8.56
+    },
+    "task": {
+     "mean": 6.774166666666667,
+     "min": 5.82,
+     "max": 7.87
+    },
+    "script": {
+     "mean": 3.4699999999999993,
+     "min": 2.76,
+     "max": 3.98
+    },
+    "steps": {
+     "mean": 30.008333333333326,
+     "min": 29.97,
+     "max": 30.08
+    },
+    "raf": {
+     "mean": 59.823333333333345,
+     "min": 59.64,
+     "max": 59.98
+    },
+    "cpuCalls": {
+     "mean": 0,
+     "min": 0,
+     "max": 0
+    },
+    "msPerCall": [],
+    "ratio": {
+     "tab": 1,
+     "gpu": 1,
+     "sum": 1,
+     "all": 1,
+     "perRun": [
+      {
+       "run": "M1",
+       "tab": 1,
+       "gpu": 1,
+       "sum": 1,
+       "all": 1
+      },
+      {
+       "run": "M2",
+       "tab": 1,
+       "gpu": 1,
+       "sum": 1,
+       "all": 1
+      },
+      {
+       "run": "M3",
+       "tab": 1,
+       "gpu": 1,
+       "sum": 1,
+       "all": 1
+      }
+     ]
+    },
+    "memTab": [
+     34.2,
+     35,
+     33.8
+    ],
+    "memGpu": [
+     116.1,
+     126.7,
+     134.1
+    ],
+    "heap": {
+     "mean": 1.1816666666666666,
+     "min": 0.95,
+     "max": 1.61
+    }
+   },
+   "synthwave": {
+    "n": 9,
+    "tab": {
+     "mean": 7.882222222222222,
+     "min": 6.42,
+     "max": 10.95
+    },
+    "gpu": {
+     "mean": 11.315555555555555,
+     "min": 8.3,
+     "max": 16.17
+    },
+    "sum": {
+     "mean": 19.197777777777777,
+     "min": 15.11,
+     "max": 27.12
+    },
+    "all": {
+     "mean": 19.83888888888889,
+     "min": 15.39,
+     "max": 27.86
+    },
+    "browser": {
+     "mean": 0.5744444444444444,
+     "min": 0.18,
+     "max": 1.4
+    },
+    "task": {
+     "mean": 4.953333333333334,
+     "min": 4.23,
+     "max": 5.88
+    },
+    "script": {
+     "mean": 1.7433333333333334,
+     "min": 1.35,
+     "max": 1.99
+    },
+    "steps": {
+     "mean": 29.98222222222222,
+     "min": 29.88,
+     "max": 30.05
+    },
+    "raf": {
+     "mean": 59.73111111111112,
+     "min": 59.25,
+     "max": 60.05
+    },
+    "cpuCalls": {
+     "mean": 0,
+     "min": 0,
+     "max": 0
+    },
+    "msPerCall": [],
+    "ratio": {
+     "tab": 0.8977719609131679,
+     "gpu": 1.0620728504061012,
+     "sum": 0.9871633489689654,
+     "all": 0.9434612911474142,
+     "perRun": [
+      {
+       "run": "M1",
+       "tab": 1.0378313970807267,
+       "gpu": 1.1737786023500312,
+       "sum": 1.1142695701308298,
+       "all": 0.9845226278445645
+      },
+      {
+       "run": "M2",
+       "tab": 0.8060331825037705,
+       "gpu": 0.9035644737956142,
+       "sum": 0.8589814304100016,
+       "all": 0.8596049317247777
+      },
+      {
+       "run": "M3",
+       "tab": 0.8494513031550068,
+       "gpu": 1.1088754750726584,
+       "sum": 0.9882390463660646,
+       "all": 0.9862563138729002
+      }
+     ]
+    },
+    "memTab": [
+     35.6,
+     33,
+     35.7
+    ],
+    "memGpu": [
+     122.2,
+     141.3,
+     134.5
+    ],
+    "heap": {
+     "mean": 1.1488888888888888,
+     "min": 0.92,
+     "max": 1.52
+    }
+   },
+   "compile_sim": {
+    "n": 12,
+    "tab": {
+     "mean": 6.5249999999999995,
+     "min": 5.82,
+     "max": 7.91
+    },
+    "gpu": {
+     "mean": 7.202500000000001,
+     "min": 5.68,
+     "max": 9.31
+    },
+    "sum": {
+     "mean": 13.7275,
+     "min": 11.780000000000001,
+     "max": 16.310000000000002
+    },
+    "all": {
+     "mean": 15.370833333333332,
+     "min": 12.52,
+     "max": 25.26
+    },
+    "browser": {
+     "mean": 1.5333333333333332,
+     "min": 0.1,
+     "max": 12.57
+    },
+    "task": {
+     "mean": 4.133333333333333,
+     "min": 3.5,
+     "max": 4.96
+    },
+    "script": {
+     "mean": 1.3558333333333332,
+     "min": 1.19,
+     "max": 1.56
+    },
+    "steps": {
+     "mean": 30.005833333333328,
+     "min": 29.95,
+     "max": 30.07
+    },
+    "raf": {
+     "mean": 59.80583333333333,
+     "min": 59.59,
+     "max": 60.01
+    },
+    "cpuCalls": {
+     "mean": 0,
+     "min": 0,
+     "max": 0
+    },
+    "msPerCall": [],
+    "ratio": {
+     "tab": 0.7437247197736694,
+     "gpu": 0.682904306651361,
+     "sum": 0.7105328292208258,
+     "all": 0.7380826373846398,
+     "perRun": [
+      {
+       "run": "M1",
+       "tab": 0.7351802204349122,
+       "gpu": 0.6697588126159556,
+       "sum": 0.6983961403051245,
+       "all": 0.6168523216058234
+      },
+      {
+       "run": "M2",
+       "tab": 0.7930618401206635,
+       "gpu": 0.7706375412750827,
+       "sum": 0.7808880308880308,
+       "all": 0.7697202704494233
+      },
+      {
+       "run": "M3",
+       "tab": 0.7029320987654322,
+       "gpu": 0.608316566063045,
+       "sum": 0.6523143164693218,
+       "all": 0.8276753200986727
+      }
+     ]
+    },
+    "memTab": [
+     32.9,
+     37.5,
+     33.6
+    ],
+    "memGpu": [
+     123.8,
+     135.5,
+     134.1
+    ],
+    "heap": {
+     "mean": 1.0583333333333333,
+     "min": 0.91,
+     "max": 1.44
+    }
+   },
+   "pacman_install": {
+    "n": 12,
+    "tab": {
+     "mean": 6.6816666666666675,
+     "min": 5.44,
+     "max": 8
+    },
+    "gpu": {
+     "mean": 8.300833333333333,
+     "min": 4.77,
+     "max": 12.62
+    },
+    "sum": {
+     "mean": 14.982500000000002,
+     "min": 10.21,
+     "max": 20.619999999999997
+    },
+    "all": {
+     "mean": 15.512500000000001,
+     "min": 10.47,
+     "max": 21.22
+    },
+    "browser": {
+     "mean": 0.4516666666666666,
+     "min": 0.13,
+     "max": 0.96
+    },
+    "task": {
+     "mean": 4.288333333333333,
+     "min": 3.58,
+     "max": 5.65
+    },
+    "script": {
+     "mean": 1.3833333333333335,
+     "min": 1.17,
+     "max": 1.56
+    },
+    "steps": {
+     "mean": 29.975833333333338,
+     "min": 29.66,
+     "max": 30.08
+    },
+    "raf": {
+     "mean": 59.62833333333334,
+     "min": 59.12,
+     "max": 59.97
+    },
+    "cpuCalls": {
+     "mean": 0,
+     "min": 0,
+     "max": 0
+    },
+    "msPerCall": [],
+    "ratio": {
+     "tab": 0.7624240373239392,
+     "gpu": 0.7844762039623232,
+     "sum": 0.7739628266351821,
+     "all": 0.7455625199308731,
+     "perRun": [
+      {
+       "run": "M1",
+       "tab": 0.7625856419422102,
+       "gpu": 0.7293599257884973,
+       "sum": 0.7439040292085018,
+       "all": 0.6568876144259403
+      },
+      {
+       "run": "M2",
+       "tab": 0.8202111613876318,
+       "gpu": 0.8366776733553469,
+       "sum": 0.8291505791505791,
+       "all": 0.8142648813469441
+      },
+      {
+       "run": "M3",
+       "tab": 0.7044753086419754,
+       "gpu": 0.7873910127431254,
+       "sum": 0.7488338715464656,
+       "all": 0.7655350640197346
+      }
+     ]
+    },
+    "memTab": [
+     37.1,
+     35.8,
+     37.3
+    ],
+    "memGpu": [
+     125.9,
+     136.1,
+     125.1
+    ],
+    "heap": {
+     "mean": 1.1591666666666665,
+     "min": 0.95,
+     "max": 1.49
+    }
+   },
+   "dashboard": {
+    "n": 9,
+    "tab": {
+     "mean": 4.724444444444444,
+     "min": 4.32,
+     "max": 5.18
+    },
+    "gpu": {
+     "mean": 3.0466666666666664,
+     "min": 2.75,
+     "max": 3.38
+    },
+    "sum": {
+     "mean": 7.771111111111113,
+     "min": 7.07,
+     "max": 8.51
+    },
+    "all": {
+     "mean": 8.58888888888889,
+     "min": 7.85,
+     "max": 9.89
+    },
+    "browser": {
+     "mean": 0.7677777777777779,
+     "min": 0.28,
+     "max": 2.06
+    },
+    "task": {
+     "mean": 2.958888888888889,
+     "min": 2.71,
+     "max": 3.23
+    },
+    "script": {
+     "mean": 0.7311111111111112,
+     "min": 0.68,
+     "max": 0.78
+    },
+    "steps": {
+     "mean": 4.9944444444444445,
+     "min": 4.99,
+     "max": 5
+    },
+    "raf": {
+     "mean": 59.730000000000004,
+     "min": 59.46,
+     "max": 59.88
+    },
+    "cpuCalls": {
+     "mean": 10,
+     "min": 10,
+     "max": 10
+    },
+    "msPerCall": [
+     3.23,
+     3.67,
+     4.03,
+     2.58,
+     1.82,
+     1.86,
+     1.46,
+     2.1,
+     1.83
+    ],
+    "ratio": {
+     "tab": 0.5381279150643136,
+     "gpu": 0.28751069490825953,
+     "sum": 0.4008483038065667,
+     "all": 0.4116885843683826,
+     "perRun": [
+      {
+       "run": "M1",
+       "tab": 0.5592294707576209,
+       "gpu": 0.2789115646258503,
+       "sum": 0.4016168992045899,
+       "all": 0.3689570236388369
+      },
+      {
+       "run": "M2",
+       "tab": 0.5417797888386122,
+       "gpu": 0.29328591990517316,
+       "sum": 0.4068762640191211,
+       "all": 0.42458791815811564
+      },
+      {
+       "run": "M3",
+       "tab": 0.5133744855967078,
+       "gpu": 0.2903346001937551,
+       "sum": 0.3940517481959893,
+       "all": 0.4415208113081953
+      }
+     ]
+    },
+    "memTab": [
+     33,
+     32.9,
+     34.9
+    ],
+    "memGpu": [
+     134.5,
+     134.6,
+     130.4
+    ],
+    "heap": {
+     "mean": 1.3144444444444445,
+     "min": 0.98,
+     "max": 1.92
+    }
+   },
+   "dashNoIpc": {
+    "n": 9,
+    "tab": {
+     "mean": 4.432222222222222,
+     "min": 3.68,
+     "max": 4.95
+    },
+    "gpu": {
+     "mean": 2.5644444444444447,
+     "min": 2.1,
+     "max": 2.92
+    },
+    "sum": {
+     "mean": 6.996666666666666,
+     "min": 5.82,
+     "max": 7.87
+    },
+    "all": {
+     "mean": 8.97111111111111,
+     "min": 7.04,
+     "max": 18.45
+    },
+    "browser": {
+     "mean": 1.8333333333333333,
+     "min": 0.33,
+     "max": 11.08
+    },
+    "task": {
+     "mean": 2.738888888888889,
+     "min": 2.04,
+     "max": 3.12
+    },
+    "script": {
+     "mean": 0.6800000000000002,
+     "min": 0.49,
+     "max": 0.82
+    },
+    "steps": {
+     "mean": 4.917777777777778,
+     "min": 4.3,
+     "max": 5
+    },
+    "raf": {
+     "mean": 58.443333333333335,
+     "min": 48.36,
+     "max": 59.92
+    },
+    "cpuCalls": {
+     "mean": 10,
+     "min": 10,
+     "max": 10
+    },
+    "msPerCall": [],
+    "ratio": {
+     "tab": 0.5073878057823419,
+     "gpu": 0.24283159445994898,
+     "sum": 0.3624245477843766,
+     "all": 0.4256506166692222,
+     "perRun": [
+      {
+       "run": "M1",
+       "tab": 0.550888690298878,
+       "gpu": 0.2529375386518244,
+       "sum": 0.3833615856043813,
+       "all": 0.517333921547002
+      },
+      {
+       "run": "M2",
+       "tab": 0.5357466063348416,
+       "gpu": 0.2621285242570485,
+       "sum": 0.3872035300606729,
+       "all": 0.4040832559989394
+      },
+      {
+       "run": "M3",
+       "tab": 0.43552812071330593,
+       "gpu": 0.213428720470974,
+       "sum": 0.3167085276880756,
+       "all": 0.3555346724617252
+      }
+     ]
+    },
+    "memTab": [
+     36.2,
+     32.2,
+     32.8
+    ],
+    "memGpu": [
+     138.7,
+     133.8,
+     133.5
+    ],
+    "heap": {
+     "mean": 1.2988888888888888,
+     "min": 0.98,
+     "max": 1.87
+    }
+   },
+   "pacman": {
+    "n": 12,
+    "tab": {
+     "mean": 7.029166666666668,
+     "min": 5.53,
+     "max": 8.88
+    },
+    "gpu": {
+     "mean": 8.1775,
+     "min": 6.11,
+     "max": 10.08
+    },
+    "sum": {
+     "mean": 15.206666666666665,
+     "min": 11.64,
+     "max": 18.880000000000003
+    },
+    "all": {
+     "mean": 16.511666666666667,
+     "min": 12.28,
+     "max": 21.2
+    },
+    "browser": {
+     "mean": 1.0525,
+     "min": 0.11,
+     "max": 6.46
+    },
+    "task": {
+     "mean": 4.705833333333333,
+     "min": 2.86,
+     "max": 6.01
+    },
+    "script": {
+     "mean": 2.0508333333333333,
+     "min": 1.24,
+     "max": 2.78
+    },
+    "steps": {
+     "mean": 29.642499999999995,
+     "min": 25.74,
+     "max": 30.06
+    },
+    "raf": {
+     "mean": 59.150000000000006,
+     "min": 51.37,
+     "max": 60.09
+    },
+    "cpuCalls": {
+     "mean": 0,
+     "min": 0,
+     "max": 0
+    },
+    "msPerCall": [],
+    "ratio": {
+     "tab": 0.7946493847512058,
+     "gpu": 0.770109214512873,
+     "sum": 0.7806859384090948,
+     "all": 0.7942057402416921,
+     "perRun": [
+      {
+       "run": "M1",
+       "tab": 0.7938635686624962,
+       "gpu": 0.6887755102040816,
+       "sum": 0.7347763724083974,
+       "all": 0.6511525311569429
+      },
+      {
+       "run": "M2",
+       "tab": 0.7194570135746605,
+       "gpu": 0.7653035306070612,
+       "sum": 0.7443463872035299,
+       "all": 0.8556277343232136
+      },
+      {
+       "run": "M3",
+       "tab": 0.870627572016461,
+       "gpu": 0.8562486027274759,
+       "sum": 0.8629350556153571,
+       "all": 0.8758369552449196
+      }
+     ]
+    },
+    "memTab": [
+     34.8,
+     38.5,
+     33.9
+    ],
+    "memGpu": [
+     138.8,
+     119.2,
+     134.1
+    ],
+    "heap": {
+     "mean": 1.1849999999999998,
+     "min": 0.93,
+     "max": 1.93
+    }
+   },
+   "mario": {
+    "n": 12,
+    "tab": {
+     "mean": 7.072499999999999,
+     "min": 5.91,
+     "max": 8.23
+    },
+    "gpu": {
+     "mean": 10.549166666666666,
+     "min": 9.29,
+     "max": 11.09
+    },
+    "sum": {
+     "mean": 17.621666666666666,
+     "min": 15.2,
+     "max": 19.19
+    },
+    "all": {
+     "mean": 19.113333333333333,
+     "min": 17.51,
+     "max": 25.07
+    },
+    "browser": {
+     "mean": 1.1699999999999997,
+     "min": 0.2,
+     "max": 7.64
+    },
+    "task": {
+     "mean": 4.783333333333333,
+     "min": 2.99,
+     "max": 6.73
+    },
+    "script": {
+     "mean": 1.6233333333333333,
+     "min": 1.11,
+     "max": 2.4
+    },
+    "steps": {
+     "mean": 29.997500000000002,
+     "min": 29.92,
+     "max": 30.07
+    },
+    "raf": {
+     "mean": 59.895,
+     "min": 59.44,
+     "max": 60.13
+    },
+    "cpuCalls": {
+     "mean": 0,
+     "min": 0,
+     "max": 0
+    },
+    "msPerCall": [],
+    "ratio": {
+     "tab": 0.812557007472519,
+     "gpu": 0.9976830094459291,
+     "sum": 0.9126880215974836,
+     "all": 0.9171414437265591,
+     "perRun": [
+      {
+       "run": "M1",
+       "tab": 0.9392314566577301,
+       "gpu": 1.0011595547309835,
+       "sum": 0.9740513756682749,
+       "all": 0.8409617293481858
+      },
+      {
+       "run": "M2",
+       "tab": 0.858521870286576,
+       "gpu": 1.059182118364237,
+       "sum": 0.9674572531715387,
+       "all": 0.9822351849396791
+      },
+      {
+       "run": "M3",
+       "tab": 0.6399176954732511,
+       "gpu": 0.9327073552425665,
+       "sum": 0.7965554359526372,
+       "all": 0.9282274168918125
+      }
+     ]
+    },
+    "memTab": [
+     36.9,
+     34.1,
+     38.5
+    ],
+    "memGpu": [
+     138.9,
+     126.9,
+     120.7
+    ],
+    "heap": {
+     "mean": 1.2641666666666669,
+     "min": 0.92,
+     "max": 1.93
+    }
+   }
+  },
+  "discarded": []
+ },
+ "runs": [
+  {
+   "label": "M1",
+   "order": [
+    "fire",
+    "synthwave",
+    "compile_sim",
+    "pacman_install",
+    "dashboard",
+    "dashNoIpc",
+    "pacman",
+    "mario"
+   ],
+   "pid": 7156,
+   "profile": "C:/ntmeas/M1-h0gzd",
+   "scen": {
+    "fire": {
+     "info": {
+      "mode": "fire",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.02,
+       "tab": 8,
+       "tabPid": 6044,
+       "otherRenderers": 0.09,
+       "gpu": 10.59,
+       "all": 30.11,
+       "byType": {
+        "browser": 8.56,
+        "renderer": 8.09,
+        "GPU": 10.59,
+        "network.mojom.NetworkService": 2.78,
+        "storage.mojom.StorageService": 0.09
+       },
+       "TaskDuration": 6.61,
+       "ScriptDuration": 2.76,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.49,
+       "stepsPerS": 30.04,
+       "rafPerS": 59.98,
+       "pageT": [
+        10520,
+        20544
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 8.5,
+       "tabPid": 6044,
+       "otherRenderers": 0.66,
+       "gpu": 10.55,
+       "all": 20.72,
+       "byType": {
+        "browser": 0.9,
+        "renderer": 9.16,
+        "GPU": 10.55,
+        "network.mojom.NetworkService": 0.11,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 7.87,
+       "ScriptDuration": 3.27,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.2,
+       "stepsPerS": 29.98,
+       "rafPerS": 59.86,
+       "pageT": [
+        20549,
+        30555
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 8.51,
+       "tabPid": 6044,
+       "otherRenderers": 0.08,
+       "gpu": 10.9,
+       "all": 19.77,
+       "byType": {
+        "browser": 0.27,
+        "renderer": 8.6,
+        "GPU": 10.9,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 7.53,
+       "ScriptDuration": 3.46,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.95,
+       "stepsPerS": 29.98,
+       "rafPerS": 59.85,
+       "pageT": [
+        30558,
+        40567
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 8.56,
+       "tabPid": 6044,
+       "otherRenderers": 0,
+       "gpu": 11.08,
+       "all": 20.07,
+       "byType": {
+        "browser": 0.44,
+        "renderer": 8.56,
+        "GPU": 11.08,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 7.68,
+       "ScriptDuration": 3.47,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1,
+       "stepsPerS": 30.06,
+       "rafPerS": 59.92,
+       "pageT": [
+        40571,
+        50584
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 90.5,
+      "privMB": 34.2
+     },
+     "gpuMem": [
+      {
+       "wsMB": 136,
+       "privMB": 116.1
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "synthwave": {
+     "info": {
+      "mode": "synthwave",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 6.73,
+       "tabPid": 17808,
+       "otherRenderers": 0.02,
+       "gpu": 9.57,
+       "all": 17.63,
+       "byType": {
+        "browser": 1.15,
+        "renderer": 6.75,
+        "GPU": 9.57,
+        "network.mojom.NetworkService": 0.16,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 5.65,
+       "ScriptDuration": 1.35,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.5,
+       "stepsPerS": 29.96,
+       "rafPerS": 59.62,
+       "pageT": [
+        10535,
+        20550
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 10.95,
+       "tabPid": 17808,
+       "otherRenderers": 0.04,
+       "gpu": 16.17,
+       "all": 27.86,
+       "byType": {
+        "browser": 0.66,
+        "renderer": 10.99,
+        "GPU": 16.17,
+        "network.mojom.NetworkService": 0.03,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 5.67,
+       "ScriptDuration": 1.98,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.22,
+       "stepsPerS": 30.05,
+       "rafPerS": 59.9,
+       "pageT": [
+        20558,
+        30576
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 8.45,
+       "tabPid": 17808,
+       "otherRenderers": 0.02,
+       "gpu": 12.22,
+       "all": 21.46,
+       "byType": {
+        "browser": 0.74,
+        "renderer": 8.47,
+        "GPU": 12.22,
+        "network.mojom.NetworkService": 0.03,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 5.88,
+       "ScriptDuration": 1.89,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.92,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.83,
+       "pageT": [
+        30585,
+        40596
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 90,
+      "privMB": 35.6
+     },
+     "gpuMem": [
+      {
+       "wsMB": 142.4,
+       "privMB": 122.2
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "compile_sim": {
+     "info": {
+      "mode": "compile_sim",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.02,
+       "tab": 6.12,
+       "tabPid": 17524,
+       "otherRenderers": 0,
+       "gpu": 6.73,
+       "all": 13.61,
+       "byType": {
+        "browser": 0.75,
+        "renderer": 6.12,
+        "GPU": 6.73,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.49,
+       "ScriptDuration": 1.41,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.12,
+       "stepsPerS": 29.95,
+       "rafPerS": 59.8,
+       "pageT": [
+        10537,
+        20553
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 6.13,
+       "tabPid": 17524,
+       "otherRenderers": 0.05,
+       "gpu": 6.99,
+       "all": 13.95,
+       "byType": {
+        "browser": 0.73,
+        "renderer": 6.18,
+        "GPU": 6.99,
+        "network.mojom.NetworkService": 0.05,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 4.63,
+       "ScriptDuration": 1.25,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.91,
+       "stepsPerS": 30.05,
+       "rafPerS": 59.91,
+       "pageT": [
+        20558,
+        30573
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 5.82,
+       "tabPid": 17524,
+       "otherRenderers": 0.21,
+       "gpu": 6.47,
+       "all": 12.86,
+       "byType": {
+        "browser": 0.36,
+        "renderer": 6.03,
+        "GPU": 6.47,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.49,
+       "ScriptDuration": 1.19,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.95,
+       "stepsPerS": 29.98,
+       "rafPerS": 59.96,
+       "pageT": [
+        30578,
+        40585
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 6.61,
+       "tabPid": 17524,
+       "otherRenderers": 0,
+       "gpu": 8.69,
+       "all": 15.51,
+       "byType": {
+        "browser": 0.2,
+        "renderer": 6.61,
+        "GPU": 8.69,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.96,
+       "ScriptDuration": 1.56,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.01,
+       "stepsPerS": 29.98,
+       "rafPerS": 59.86,
+       "pageT": [
+        40589,
+        50597
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 88,
+      "privMB": 32.9
+     },
+     "gpuMem": [
+      {
+       "wsMB": 144.2,
+       "privMB": 123.8
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "pacman_install": {
+     "info": {
+      "mode": "pacman_install",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 5.85,
+       "tabPid": 16884,
+       "otherRenderers": 0,
+       "gpu": 4.99,
+       "all": 11.71,
+       "byType": {
+        "browser": 0.71,
+        "renderer": 5.86,
+        "GPU": 4.99,
+        "network.mojom.NetworkService": 0.15,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.2,
+       "ScriptDuration": 1.3,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.43,
+       "stepsPerS": 30.07,
+       "rafPerS": 59.54,
+       "pageT": [
+        10528,
+        20541
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 7.27,
+       "tabPid": 16884,
+       "otherRenderers": 0.02,
+       "gpu": 10.77,
+       "all": 18.82,
+       "byType": {
+        "browser": 0.73,
+        "renderer": 7.3,
+        "GPU": 10.77,
+        "network.mojom.NetworkService": 0.03,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 5.65,
+       "ScriptDuration": 1.37,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.22,
+       "stepsPerS": 29.66,
+       "rafPerS": 59.12,
+       "pageT": [
+        20544,
+        30564
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 5.44,
+       "tabPid": 16884,
+       "otherRenderers": 0,
+       "gpu": 4.77,
+       "all": 10.47,
+       "byType": {
+        "browser": 0.23,
+        "renderer": 5.45,
+        "GPU": 4.77,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 4.02,
+       "ScriptDuration": 1.17,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.97,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.44,
+       "pageT": [
+        30572,
+        40582
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 7.04,
+       "tabPid": 16884,
+       "otherRenderers": 0,
+       "gpu": 10.92,
+       "all": 18.56,
+       "byType": {
+        "browser": 0.54,
+        "renderer": 7.04,
+        "GPU": 10.92,
+        "network.mojom.NetworkService": 0.07,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 5.6,
+       "ScriptDuration": 1.41,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.02,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.74,
+       "pageT": [
+        40586,
+        50596
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 91.1,
+      "privMB": 37.1
+     },
+     "gpuMem": [
+      {
+       "wsMB": 146.3,
+       "privMB": 125.9
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "dashboard": {
+     "info": {
+      "mode": "dashboard",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 13,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 4.74,
+       "tabPid": 8948,
+       "otherRenderers": 0,
+       "gpu": 3.01,
+       "all": 8.39,
+       "byType": {
+        "browser": 0.62,
+        "renderer": 4.74,
+        "GPU": 3.01,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.01,
+       "ScriptDuration": 0.76,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.52,
+       "stepsPerS": 5,
+       "rafPerS": 59.77,
+       "pageT": [
+        10552,
+        20557
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": 3.23
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 5.02,
+       "tabPid": 8948,
+       "otherRenderers": 0,
+       "gpu": 3.26,
+       "all": 8.71,
+       "byType": {
+        "browser": 0.36,
+        "renderer": 5.02,
+        "GPU": 3.26,
+        "network.mojom.NetworkService": 0.07,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.23,
+       "ScriptDuration": 0.75,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.98,
+       "stepsPerS": 4.99,
+       "rafPerS": 59.73,
+       "pageT": [
+        20560,
+        30578
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": 3.67
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 4.32,
+       "tabPid": 8948,
+       "otherRenderers": 0.04,
+       "gpu": 2.75,
+       "all": 7.99,
+       "byType": {
+        "browser": 0.85,
+        "renderer": 4.36,
+        "GPU": 2.75,
+        "network.mojom.NetworkService": 0.03,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 2.83,
+       "ScriptDuration": 0.69,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.21,
+       "stepsPerS": 4.99,
+       "rafPerS": 59.83,
+       "pageT": [
+        30583,
+        40594
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": 4.03
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 85.5,
+      "privMB": 33
+     },
+     "gpuMem": [
+      {
+       "wsMB": 152,
+       "privMB": 134.5
+      }
+     ],
+     "dashText": [
+      "",
+      "                                                                                        ██ ████    ████ ████    ████ ████",
+      "                                                                                         █ █  █   ■   █ █      ■█    █",
+      "                                                                                         █ █  █    ████ ████    ████ ████",
+      "                                                                                         █ █  █   ■   █ █  █   ■   █    █",
+      "                                                                                         █ ████    ████ ████    ████ ████",
+      "",
+      "                                                                           RAM   [███████████-------]  63.6%  10.0 GB / 15.7 GB",
+      "                                                                           DISK   456.6 GB total",
+      "",
+      "                                                                           CPU0  [█-----------]  10.8%      CPU6  [██----------]  16.9%",
+      "                                                                           CPU1  [------------]   0.0%      CPU7  [------------]   7.8%",
+      "                                                                           CPU2  [██----------]  20.0%      CPU8  [------------]   1.5%",
+      "                                                                           CPU3  [███---------]  26.2%      CPU9  [------------]   0.0%",
+      "                                                                           CPU4  [------------]   3.0%      CPU10 [------------]   0.0%",
+      "                                                                           CPU5  [------------]   0.0%      CPU11 [------------]   0.0%",
+      "",
+      " ═ BROWSER (REPORTED BY THE BROWSER) ═════════════════════════════════════════════════",
+      " Chrome: 155",
+      " OS: Windows",
+      " Cores: 12",
+      " JS heap: 2 / 4192 MB",
+      " Network: 4g 1.65 Mbps 50 ms",
+      " Battery: 70 % (discharging)",
+      " Language: es-ES",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "dashNoIpc": {
+     "info": {
+      "mode": "dashboard",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 13,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 4.83,
+       "tabPid": 16716,
+       "otherRenderers": 0,
+       "gpu": 2.91,
+       "all": 8.16,
+       "byType": {
+        "browser": 0.41,
+        "renderer": 4.83,
+        "GPU": 2.91,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 2.96,
+       "ScriptDuration": 0.69,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.87,
+       "stepsPerS": 5,
+       "rafPerS": 59.66,
+       "pageT": [
+        10531,
+        20538
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 4.68,
+       "tabPid": 16716,
+       "otherRenderers": 0.12,
+       "gpu": 2.77,
+       "all": 8.57,
+       "byType": {
+        "browser": 0.93,
+        "renderer": 4.8,
+        "GPU": 2.77,
+        "network.mojom.NetworkService": 0.05,
+        "storage.mojom.StorageService": 0.02
+       },
+       "TaskDuration": 3.12,
+       "ScriptDuration": 0.72,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.29,
+       "stepsPerS": 5,
+       "rafPerS": 59.66,
+       "pageT": [
+        20540,
+        30547
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 4.36,
+       "tabPid": 16716,
+       "otherRenderers": 0,
+       "gpu": 2.5,
+       "all": 18.45,
+       "byType": {
+        "browser": 11.08,
+        "renderer": 4.36,
+        "GPU": 2.5,
+        "network.mojom.NetworkService": 0.5,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 2.96,
+       "ScriptDuration": 0.75,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.19,
+       "stepsPerS": 5,
+       "rafPerS": 59.56,
+       "pageT": [
+        30550,
+        40558
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 92.3,
+      "privMB": 36.2
+     },
+     "gpuMem": [
+      {
+       "wsMB": 155.7,
+       "privMB": 138.7
+      }
+     ],
+     "dashText": [
+      "",
+      "                                                                                        ██ ████    ████ ████    ████ ████",
+      "                                                                                         █ █  █   ■   █    █   ■   █ █  █",
+      "                                                                                         █ █  █    ████   ██    ████ ████",
+      "                                                                                         █ █  █   ■   █   █    ■   █ █  █",
+      "                                                                                         █ ████    ████   █     ████ ████",
+      "",
+      "                                                                           RAM   [███████████-------]  63.8%  10.0 GB / 15.7 GB",
+      "                                                                           DISK   456.6 GB total",
+      "",
+      "                                                                           CPU0  [------------]   0.0%      CPU6  [------------]   0.0%",
+      "                                                                           CPU1  [------------]   0.0%      CPU7  [------------]   0.0%",
+      "                                                                           CPU2  [------------]   0.0%      CPU8  [------------]   0.0%",
+      "                                                                           CPU3  [------------]   0.0%      CPU9  [------------]   0.0%",
+      "                                                                           CPU4  [------------]   0.0%      CPU10 [------------]   0.0%",
+      "                                                                           CPU5  [------------]   0.0%      CPU11 [------------]   0.0%",
+      "",
+      " ═ BROWSER (REPORTED BY THE BROWSER) ═════════════════════════════════════════════════",
+      " Chrome: 155",
+      " OS: Windows",
+      " Cores: 12",
+      " JS heap: 2 / 4192 MB",
+      " Network: 4g 1.7 Mbps 50 ms",
+      " Battery: 70 % (discharging)",
+      " Language: es-ES",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "pacman": {
+     "info": {
+      "mode": "pacman",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.02,
+       "tab": 6.92,
+       "tabPid": 15116,
+       "otherRenderers": 0.03,
+       "gpu": 7.93,
+       "all": 15.36,
+       "byType": {
+        "browser": 0.42,
+        "renderer": 6.95,
+        "GPU": 7.93,
+        "network.mojom.NetworkService": 0.05,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 6,
+       "ScriptDuration": 2.7,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.12,
+       "stepsPerS": 29.94,
+       "rafPerS": 59.98,
+       "pageT": [
+        10540,
+        20561
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 5.53,
+       "tabPid": 15116,
+       "otherRenderers": 0,
+       "gpu": 6.11,
+       "all": 12.28,
+       "byType": {
+        "browser": 0.62,
+        "renderer": 5.53,
+        "GPU": 6.11,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 4.09,
+       "ScriptDuration": 1.47,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.93,
+       "stepsPerS": 25.74,
+       "rafPerS": 51.37,
+       "pageT": [
+        20566,
+        30589
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 6.87,
+       "tabPid": 15116,
+       "otherRenderers": 0,
+       "gpu": 7.58,
+       "all": 14.64,
+       "byType": {
+        "browser": 0.19,
+        "renderer": 6.87,
+        "GPU": 7.58,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 5.68,
+       "ScriptDuration": 2.13,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.98,
+       "stepsPerS": 29.95,
+       "rafPerS": 59.51,
+       "pageT": [
+        30598,
+        40608
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 7.33,
+       "tabPid": 15116,
+       "otherRenderers": 0,
+       "gpu": 8.08,
+       "all": 16.76,
+       "byType": {
+        "browser": 1.29,
+        "renderer": 7.33,
+        "GPU": 8.08,
+        "network.mojom.NetworkService": 0.05,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 6.01,
+       "ScriptDuration": 2.54,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.03,
+       "stepsPerS": 30.04,
+       "rafPerS": 59.88,
+       "pageT": [
+        40611,
+        50633
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 90.5,
+      "privMB": 34.8
+     },
+     "gpuMem": [
+      {
+       "wsMB": 156.1,
+       "privMB": 138.8
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "mario": {
+     "info": {
+      "mode": "mario",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 7.62,
+       "tabPid": 19444,
+       "otherRenderers": 0.07,
+       "gpu": 10.56,
+       "all": 18.69,
+       "byType": {
+        "browser": 0.4,
+        "renderer": 7.7,
+        "GPU": 10.56,
+        "network.mojom.NetworkService": 0.02,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 6.46,
+       "ScriptDuration": 2.11,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.86,
+       "stepsPerS": 29.98,
+       "rafPerS": 59.87,
+       "pageT": [
+        10520,
+        20525
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 8.23,
+       "tabPid": 19444,
+       "otherRenderers": 0,
+       "gpu": 10.96,
+       "all": 19.44,
+       "byType": {
+        "browser": 0.2,
+        "renderer": 8.23,
+        "GPU": 10.96,
+        "network.mojom.NetworkService": 0.05,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 6.47,
+       "ScriptDuration": 2.04,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.21,
+       "stepsPerS": 30.05,
+       "rafPerS": 59.79,
+       "pageT": [
+        20527,
+        30545
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.03,
+       "tab": 7.9,
+       "tabPid": 19444,
+       "otherRenderers": 0,
+       "gpu": 10.66,
+       "all": 19.02,
+       "byType": {
+        "browser": 0.39,
+        "renderer": 7.9,
+        "GPU": 10.66,
+        "network.mojom.NetworkService": 0.07,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 6.73,
+       "ScriptDuration": 2.4,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.95,
+       "stepsPerS": 29.92,
+       "rafPerS": 59.44,
+       "pageT": [
+        30548,
+        40576
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 7.78,
+       "tabPid": 19444,
+       "otherRenderers": 0,
+       "gpu": 10.99,
+       "all": 19.1,
+       "byType": {
+        "browser": 0.32,
+        "renderer": 7.78,
+        "GPU": 10.99,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 6.12,
+       "ScriptDuration": 1.93,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1,
+       "stepsPerS": 30.05,
+       "rafPerS": 59.89,
+       "pageT": [
+        40580,
+        50605
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 92.2,
+      "privMB": 36.9
+     },
+     "gpuMem": [
+      {
+       "wsMB": 156.4,
+       "privMB": 138.9
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    }
+   },
+   "profileRemoved": false
+  },
+  {
+   "label": "M2",
+   "order": [
+    "pacman",
+    "mario",
+    "fire",
+    "dashNoIpc",
+    "dashboard",
+    "synthwave",
+    "compile_sim",
+    "pacman_install"
+   ],
+   "pid": 6992,
+   "profile": "C:/ntmeas/M2-h97xc",
+   "scen": {
+    "pacman": {
+     "info": {
+      "mode": "pacman",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 5.6,
+       "tabPid": 19108,
+       "otherRenderers": 0.09,
+       "gpu": 7.34,
+       "all": 21.2,
+       "byType": {
+        "browser": 6.46,
+        "renderer": 5.69,
+        "GPU": 7.34,
+        "network.mojom.NetworkService": 1.63,
+        "storage.mojom.StorageService": 0.08
+       },
+       "TaskDuration": 2.86,
+       "ScriptDuration": 1.24,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.93,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.93,
+       "pageT": [
+        10536,
+        20548
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 5.79,
+       "tabPid": 19108,
+       "otherRenderers": 0.71,
+       "gpu": 7,
+       "all": 14.44,
+       "byType": {
+        "browser": 0.83,
+        "renderer": 6.5,
+        "GPU": 7,
+        "network.mojom.NetworkService": 0.11,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.01,
+       "ScriptDuration": 1.27,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.22,
+       "stepsPerS": 29.94,
+       "rafPerS": 59.97,
+       "pageT": [
+        20551,
+        30573
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 6.37,
+       "tabPid": 19108,
+       "otherRenderers": 0,
+       "gpu": 8.1,
+       "all": 14.74,
+       "byType": {
+        "browser": 0.25,
+        "renderer": 6.37,
+        "GPU": 8.1,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.37,
+       "ScriptDuration": 1.46,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.96,
+       "stepsPerS": 30.04,
+       "rafPerS": 60.09,
+       "pageT": [
+        30577,
+        40600
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 6.09,
+       "tabPid": 19108,
+       "otherRenderers": 0,
+       "gpu": 7.69,
+       "all": 14.16,
+       "byType": {
+        "browser": 0.39,
+        "renderer": 6.09,
+        "GPU": 7.69,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.24,
+       "ScriptDuration": 1.41,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.02,
+       "stepsPerS": 30.05,
+       "rafPerS": 59.99,
+       "pageT": [
+        40603,
+        50622
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 94.9,
+      "privMB": 38.5
+     },
+     "gpuMem": [
+      {
+       "wsMB": 139.5,
+       "privMB": 119.2
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "mario": {
+     "info": {
+      "mode": "mario",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 74,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.02,
+       "tab": 6.66,
+       "tabPid": 17156,
+       "otherRenderers": 0.02,
+       "gpu": 9.72,
+       "all": 17.51,
+       "byType": {
+        "browser": 0.96,
+        "renderer": 6.68,
+        "GPU": 9.72,
+        "network.mojom.NetworkService": 0.15,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.66,
+       "ScriptDuration": 1.43,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.63,
+       "stepsPerS": 29.95,
+       "rafPerS": 59.9,
+       "pageT": [
+        10525,
+        20542
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 7.54,
+       "tabPid": 17156,
+       "otherRenderers": 0.02,
+       "gpu": 10.71,
+       "all": 18.94,
+       "byType": {
+        "browser": 0.64,
+        "renderer": 7.56,
+        "GPU": 10.71,
+        "network.mojom.NetworkService": 0.02,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.64,
+       "ScriptDuration": 1.57,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.21,
+       "stepsPerS": 30.07,
+       "rafPerS": 59.84,
+       "pageT": [
+        20546,
+        30556
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 7.23,
+       "tabPid": 17156,
+       "otherRenderers": 0.02,
+       "gpu": 10.88,
+       "all": 18.43,
+       "byType": {
+        "browser": 0.29,
+        "renderer": 7.25,
+        "GPU": 10.88,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.5,
+       "ScriptDuration": 1.71,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.27,
+       "stepsPerS": 29.95,
+       "rafPerS": 60,
+       "pageT": [
+        30559,
+        40578
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 7.03,
+       "tabPid": 17156,
+       "otherRenderers": 0.21,
+       "gpu": 10.39,
+       "all": 19.21,
+       "byType": {
+        "browser": 1.56,
+        "renderer": 7.24,
+        "GPU": 10.39,
+        "network.mojom.NetworkService": 0.02,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.61,
+       "ScriptDuration": 1.47,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.92,
+       "stepsPerS": 30.05,
+       "rafPerS": 60.1,
+       "pageT": [
+        40582,
+        50599
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 89.5,
+      "privMB": 34.1
+     },
+     "gpuMem": [
+      {
+       "wsMB": 147.3,
+       "privMB": 126.9
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "fire": {
+     "info": {
+      "mode": "fire",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 8.64,
+       "tabPid": 18348,
+       "otherRenderers": 0.05,
+       "gpu": 9.88,
+       "all": 19.67,
+       "byType": {
+        "browser": 1.03,
+        "renderer": 8.69,
+        "GPU": 9.88,
+        "network.mojom.NetworkService": 0.07,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 6.37,
+       "ScriptDuration": 3.39,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.61,
+       "stepsPerS": 29.98,
+       "rafPerS": 59.86,
+       "pageT": [
+        10539,
+        20545
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10,
+       "tab": 8.41,
+       "tabPid": 18348,
+       "otherRenderers": 0,
+       "gpu": 9.81,
+       "all": 18.98,
+       "byType": {
+        "browser": 0.64,
+        "renderer": 8.41,
+        "GPU": 9.81,
+        "network.mojom.NetworkService": 0.11,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 6.14,
+       "ScriptDuration": 3.33,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.22,
+       "stepsPerS": 29.99,
+       "rafPerS": 59.98,
+       "pageT": [
+        20548,
+        30551
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 7.9,
+       "tabPid": 18348,
+       "otherRenderers": 0,
+       "gpu": 9.53,
+       "all": 18.16,
+       "byType": {
+        "browser": 0.7,
+        "renderer": 7.9,
+        "GPU": 9.53,
+        "network.mojom.NetworkService": 0.04,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 5.82,
+       "ScriptDuration": 3.13,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.95,
+       "stepsPerS": 29.98,
+       "rafPerS": 59.87,
+       "pageT": [
+        30554,
+        40560
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 8.2,
+       "tabPid": 18348,
+       "otherRenderers": 0,
+       "gpu": 10.15,
+       "all": 18.62,
+       "byType": {
+        "browser": 0.26,
+        "renderer": 8.21,
+        "GPU": 10.15,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 6.13,
+       "ScriptDuration": 3.29,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1,
+       "stepsPerS": 30.08,
+       "rafPerS": 59.95,
+       "pageT": [
+        40564,
+        50572
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 89.6,
+      "privMB": 35
+     },
+     "gpuMem": [
+      {
+       "wsMB": 147.3,
+       "privMB": 126.7
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "dashNoIpc": {
+     "info": {
+      "mode": "dashboard",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 13,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 4.1,
+       "tabPid": 4660,
+       "otherRenderers": 0.02,
+       "gpu": 2.4,
+       "all": 7.37,
+       "byType": {
+        "browser": 0.74,
+        "renderer": 4.13,
+        "GPU": 2.4,
+        "network.mojom.NetworkService": 0.11,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 2.63,
+       "ScriptDuration": 0.67,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.5,
+       "stepsPerS": 4.99,
+       "rafPerS": 59.92,
+       "pageT": [
+        10543,
+        20554
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 4.61,
+       "tabPid": 4660,
+       "otherRenderers": 0,
+       "gpu": 2.66,
+       "all": 7.87,
+       "byType": {
+        "browser": 0.54,
+        "renderer": 4.61,
+        "GPU": 2.66,
+        "network.mojom.NetworkService": 0.05,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 2.96,
+       "ScriptDuration": 0.74,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.98,
+       "stepsPerS": 4.99,
+       "rafPerS": 59.68,
+       "pageT": [
+        20557,
+        30578
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 4.61,
+       "tabPid": 4660,
+       "otherRenderers": 0,
+       "gpu": 2.68,
+       "all": 7.62,
+       "byType": {
+        "browser": 0.33,
+        "renderer": 4.61,
+        "GPU": 2.68,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 2.83,
+       "ScriptDuration": 0.72,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.19,
+       "stepsPerS": 4.99,
+       "rafPerS": 59.9,
+       "pageT": [
+        30582,
+        40598
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 87.4,
+      "privMB": 32.2
+     },
+     "gpuMem": [
+      {
+       "wsMB": 153.8,
+       "privMB": 133.8
+      }
+     ],
+     "dashText": [
+      "",
+      "                                                                                        ██ ████    █  █ ████    ████ ████",
+      "                                                                                         █ █  █   ■█  █    █   ■█  █ █  █",
+      "                                                                                         █ █  █    ████ ████    █  █ █  █",
+      "                                                                                         █ █  █   ■   █    █   ■█  █ █  █",
+      "                                                                                         █ ████       █ ████    ████ ████",
+      "",
+      "                                                                           RAM   [███████████-------]  64.1%  10.1 GB / 15.7 GB",
+      "                                                                           DISK   456.6 GB total",
+      "",
+      "                                                                           CPU0  [------------]   0.0%      CPU6  [------------]   0.0%",
+      "                                                                           CPU1  [------------]   0.0%      CPU7  [------------]   0.0%",
+      "                                                                           CPU2  [------------]   0.0%      CPU8  [------------]   0.0%",
+      "                                                                           CPU3  [------------]   0.0%      CPU9  [------------]   0.0%",
+      "                                                                           CPU4  [------------]   0.0%      CPU10 [------------]   0.0%",
+      "                                                                           CPU5  [------------]   0.0%      CPU11 [------------]   0.0%",
+      "",
+      " ═ BROWSER (REPORTED BY THE BROWSER) ═════════════════════════════════════════════════",
+      " Chrome: 155",
+      " OS: Windows",
+      " Cores: 12",
+      " JS heap: 2 / 4192 MB",
+      " Network: 4g 1.6 Mbps 50 ms",
+      " Battery: 69 % (discharging)",
+      " Language: es-ES",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "dashboard": {
+     "info": {
+      "mode": "dashboard",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 13,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.02,
+       "tab": 4.42,
+       "tabPid": 11568,
+       "otherRenderers": 0,
+       "gpu": 2.87,
+       "all": 7.85,
+       "byType": {
+        "browser": 0.55,
+        "renderer": 4.42,
+        "GPU": 2.87,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 2.94,
+       "ScriptDuration": 0.78,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.54,
+       "stepsPerS": 4.99,
+       "rafPerS": 59.69,
+       "pageT": [
+        10520,
+        20538
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": 2.58
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 4.58,
+       "tabPid": 11568,
+       "otherRenderers": 0,
+       "gpu": 3.01,
+       "all": 7.88,
+       "byType": {
+        "browser": 0.28,
+        "renderer": 4.58,
+        "GPU": 3.01,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 2.88,
+       "ScriptDuration": 0.74,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.98,
+       "stepsPerS": 5,
+       "rafPerS": 59.84,
+       "pageT": [
+        20542,
+        30553
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": 1.82
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 4.47,
+       "tabPid": 11568,
+       "otherRenderers": 0.05,
+       "gpu": 2.78,
+       "all": 8.29,
+       "byType": {
+        "browser": 0.92,
+        "renderer": 4.52,
+        "GPU": 2.78,
+        "network.mojom.NetworkService": 0.05,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 2.87,
+       "ScriptDuration": 0.69,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.2,
+       "stepsPerS": 5,
+       "rafPerS": 59.55,
+       "pageT": [
+        30558,
+        40566
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": 1.86
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 87.7,
+      "privMB": 32.9
+     },
+     "gpuMem": [
+      {
+       "wsMB": 154.5,
+       "privMB": 134.6
+      }
+     ],
+     "dashText": [
+      "",
+      "                                                                                        ██ ████    █  █ ████    █  █ ████",
+      "                                                                                         █ █  █   ■█  █    █   ■█  █    █",
+      "                                                                                         █ █  █    ████ ████    ████ ████",
+      "                                                                                         █ █  █   ■   █    █   ■   █    █",
+      "                                                                                         █ ████       █ ████       █ ████",
+      "",
+      "                                                                           RAM   [███████████-------]  63.5%  10.0 GB / 15.7 GB",
+      "                                                                           DISK   456.6 GB total",
+      "",
+      "                                                                           CPU0  [------------]   6.3%      CPU6  [------------]   0.0%",
+      "                                                                           CPU1  [------------]   0.0%      CPU7  [------------]   0.0%",
+      "                                                                           CPU2  [██----------]  18.8%      CPU8  [------------]   3.2%",
+      "                                                                           CPU3  [██----------]  20.3%      CPU9  [------------]   1.6%",
+      "                                                                           CPU4  [------------]   0.0%      CPU10 [------------]   0.0%",
+      "                                                                           CPU5  [------------]   0.0%      CPU11 [------------]   4.7%",
+      "",
+      " ═ BROWSER (REPORTED BY THE BROWSER) ═════════════════════════════════════════════════",
+      " Chrome: 155",
+      " OS: Windows",
+      " Cores: 12",
+      " JS heap: 2 / 4192 MB",
+      " Network: 4g 1.7 Mbps 50 ms",
+      " Battery: 68 % (discharging)",
+      " Language: es-ES",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "synthwave": {
+     "info": {
+      "mode": "synthwave",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 75,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.03,
+       "tab": 6.42,
+       "tabPid": 8408,
+       "otherRenderers": 0,
+       "gpu": 8.78,
+       "all": 15.39,
+       "byType": {
+        "browser": 0.18,
+        "renderer": 6.42,
+        "GPU": 8.78,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.34,
+       "ScriptDuration": 1.64,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.11,
+       "stepsPerS": 30.02,
+       "rafPerS": 59.25,
+       "pageT": [
+        10610,
+        20621
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 6.81,
+       "tabPid": 8408,
+       "otherRenderers": 0.01,
+       "gpu": 8.3,
+       "all": 16.61,
+       "byType": {
+        "browser": 1.4,
+        "renderer": 6.81,
+        "GPU": 8.3,
+        "network.mojom.NetworkService": 0.11,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.3,
+       "ScriptDuration": 1.5,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.93,
+       "stepsPerS": 29.98,
+       "rafPerS": 59.76,
+       "pageT": [
+        20627,
+        30635
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 6.81,
+       "tabPid": 8408,
+       "otherRenderers": 0,
+       "gpu": 9.6,
+       "all": 16.63,
+       "byType": {
+        "browser": 0.22,
+        "renderer": 6.81,
+        "GPU": 9.6,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.23,
+       "ScriptDuration": 1.56,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.98,
+       "stepsPerS": 29.88,
+       "rafPerS": 59.26,
+       "pageT": [
+        30638,
+        40646
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 87.8,
+      "privMB": 33
+     },
+     "gpuMem": [
+      {
+       "wsMB": 161.8,
+       "privMB": 141.3
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "compile_sim": {
+     "info": {
+      "mode": "compile_sim",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 74,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 5.91,
+       "tabPid": 5436,
+       "otherRenderers": 0.04,
+       "gpu": 5.87,
+       "all": 12.52,
+       "byType": {
+        "browser": 0.66,
+        "renderer": 5.95,
+        "GPU": 5.87,
+        "network.mojom.NetworkService": 0.05,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.58,
+       "ScriptDuration": 1.29,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.44,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.74,
+       "pageT": [
+        10564,
+        20575
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 6.54,
+       "tabPid": 5436,
+       "otherRenderers": 0,
+       "gpu": 7.36,
+       "all": 14.23,
+       "byType": {
+        "browser": 0.3,
+        "renderer": 6.54,
+        "GPU": 7.36,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 4.14,
+       "ScriptDuration": 1.4,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.22,
+       "stepsPerS": 29.98,
+       "rafPerS": 59.86,
+       "pageT": [
+        20578,
+        30585
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 6.84,
+       "tabPid": 5436,
+       "otherRenderers": 0,
+       "gpu": 7.8,
+       "all": 14.88,
+       "byType": {
+        "browser": 0.23,
+        "renderer": 6.84,
+        "GPU": 7.8,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.08,
+       "ScriptDuration": 1.5,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.97,
+       "stepsPerS": 30.06,
+       "rafPerS": 59.83,
+       "pageT": [
+        30588,
+        40601
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 7,
+       "tabPid": 5436,
+       "otherRenderers": 0,
+       "gpu": 9.31,
+       "all": 16.43,
+       "byType": {
+        "browser": 0.1,
+        "renderer": 7,
+        "GPU": 9.31,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.15,
+       "ScriptDuration": 1.49,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.02,
+       "stepsPerS": 30.05,
+       "rafPerS": 59.59,
+       "pageT": [
+        40606,
+        50625
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 92.1,
+      "privMB": 37.5
+     },
+     "gpuMem": [
+      {
+       "wsMB": 156,
+       "privMB": 135.5
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "pacman_install": {
+     "info": {
+      "mode": "pacman_install",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 6.43,
+       "tabPid": 16712,
+       "otherRenderers": 0.06,
+       "gpu": 5.63,
+       "all": 12.7,
+       "byType": {
+        "browser": 0.55,
+        "renderer": 6.48,
+        "GPU": 5.63,
+        "network.mojom.NetworkService": 0.02,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 4.15,
+       "ScriptDuration": 1.56,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.44,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.64,
+       "pageT": [
+        10545,
+        20555
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 7.58,
+       "tabPid": 16712,
+       "otherRenderers": 0,
+       "gpu": 11.97,
+       "all": 19.86,
+       "byType": {
+        "browser": 0.17,
+        "renderer": 7.58,
+        "GPU": 11.97,
+        "network.mojom.NetworkService": 0.13,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.36,
+       "ScriptDuration": 1.49,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.21,
+       "stepsPerS": 30.05,
+       "rafPerS": 59.81,
+       "pageT": [
+        20560,
+        30575
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 6.02,
+       "tabPid": 16712,
+       "otherRenderers": 0,
+       "gpu": 5.21,
+       "all": 11.37,
+       "byType": {
+        "browser": 0.13,
+        "renderer": 6.02,
+        "GPU": 5.21,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.83,
+       "ScriptDuration": 1.34,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.95,
+       "stepsPerS": 29.98,
+       "rafPerS": 59.97,
+       "pageT": [
+        30578,
+        40584
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10,
+       "tab": 7.16,
+       "tabPid": 16712,
+       "otherRenderers": 0,
+       "gpu": 10.13,
+       "all": 17.49,
+       "byType": {
+        "browser": 0.18,
+        "renderer": 7.16,
+        "GPU": 10.13,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.05,
+       "ScriptDuration": 1.44,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.01,
+       "stepsPerS": 29.99,
+       "rafPerS": 59.67,
+       "pageT": [
+        40587,
+        50593
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 90.6,
+      "privMB": 35.8
+     },
+     "gpuMem": [
+      {
+       "wsMB": 156.8,
+       "privMB": 136.1
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    }
+   },
+   "profileRemoved": false
+  },
+  {
+   "label": "M3",
+   "order": [
+    "mario",
+    "pacman_install",
+    "dashboard",
+    "dashNoIpc",
+    "compile_sim",
+    "fire",
+    "pacman",
+    "synthwave"
+   ],
+   "pid": 1876,
+   "profile": "C:/ntmeas/M3-hhyz7",
+   "scen": {
+    "mario": {
+     "info": {
+      "mode": "mario",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 72,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 5.91,
+       "tabPid": 18052,
+       "otherRenderers": 0.1,
+       "gpu": 9.29,
+       "all": 25.07,
+       "byType": {
+        "browser": 7.64,
+        "renderer": 6.02,
+        "GPU": 9.29,
+        "network.mojom.NetworkService": 2.04,
+        "storage.mojom.StorageService": 0.08
+       },
+       "TaskDuration": 2.99,
+       "ScriptDuration": 1.11,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.93,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.94,
+       "pageT": [
+        10551,
+        20558
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 6.36,
+       "tabPid": 18052,
+       "otherRenderers": 0.7,
+       "gpu": 10.28,
+       "all": 18.32,
+       "byType": {
+        "browser": 0.86,
+        "renderer": 7.07,
+        "GPU": 10.28,
+        "network.mojom.NetworkService": 0.11,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.37,
+       "ScriptDuration": 1.21,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.21,
+       "stepsPerS": 29.94,
+       "rafPerS": 59.89,
+       "pageT": [
+        20562,
+        30581
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 6.27,
+       "tabPid": 18052,
+       "otherRenderers": 0.07,
+       "gpu": 11.09,
+       "all": 17.72,
+       "byType": {
+        "browser": 0.28,
+        "renderer": 6.34,
+        "GPU": 11.09,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.47,
+       "ScriptDuration": 1.23,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.96,
+       "stepsPerS": 30.07,
+       "rafPerS": 60.13,
+       "pageT": [
+        30585,
+        40596
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 6.34,
+       "tabPid": 18052,
+       "otherRenderers": 0,
+       "gpu": 11.06,
+       "all": 17.91,
+       "byType": {
+        "browser": 0.5,
+        "renderer": 6.34,
+        "GPU": 11.06,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.38,
+       "ScriptDuration": 1.27,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.02,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.95,
+       "pageT": [
+        40599,
+        50608
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 94.7,
+      "privMB": 38.5
+     },
+     "gpuMem": [
+      {
+       "wsMB": 141,
+       "privMB": 120.7
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "pacman_install": {
+     "info": {
+      "mode": "pacman_install",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 6.23,
+       "tabPid": 11084,
+       "otherRenderers": 0.03,
+       "gpu": 5.72,
+       "all": 13.17,
+       "byType": {
+        "browser": 0.96,
+        "renderer": 6.27,
+        "GPU": 5.72,
+        "network.mojom.NetworkService": 0.21,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 3.71,
+       "ScriptDuration": 1.41,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.49,
+       "stepsPerS": 29.96,
+       "rafPerS": 59.52,
+       "pageT": [
+        10520,
+        20533
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 8,
+       "tabPid": 11084,
+       "otherRenderers": 0.01,
+       "gpu": 12.62,
+       "all": 21.22,
+       "byType": {
+        "browser": 0.56,
+        "renderer": 8.02,
+        "GPU": 12.62,
+        "network.mojom.NetworkService": 0.03,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.35,
+       "ScriptDuration": 1.45,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.21,
+       "stepsPerS": 30.08,
+       "rafPerS": 59.86,
+       "pageT": [
+        20536,
+        30545
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 7.04,
+       "tabPid": 11084,
+       "otherRenderers": 0.02,
+       "gpu": 9.64,
+       "all": 17.02,
+       "byType": {
+        "browser": 0.31,
+        "renderer": 7.05,
+        "GPU": 9.64,
+        "network.mojom.NetworkService": 0.02,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.96,
+       "ScriptDuration": 1.4,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.95,
+       "stepsPerS": 30.04,
+       "rafPerS": 59.58,
+       "pageT": [
+        30552,
+        40571
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 6.12,
+       "tabPid": 11084,
+       "otherRenderers": 0.02,
+       "gpu": 7.24,
+       "all": 13.76,
+       "byType": {
+        "browser": 0.35,
+        "renderer": 6.14,
+        "GPU": 7.24,
+        "network.mojom.NetworkService": 0.02,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.58,
+       "ScriptDuration": 1.26,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.01,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.65,
+       "pageT": [
+        40576,
+        50585
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 91.8,
+      "privMB": 37.3
+     },
+     "gpuMem": [
+      {
+       "wsMB": 145.5,
+       "privMB": 125.1
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "dashboard": {
+     "info": {
+      "mode": "dashboard",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 13,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.02,
+       "tab": 4.66,
+       "tabPid": 18876,
+       "otherRenderers": 0.05,
+       "gpu": 3.05,
+       "all": 9.89,
+       "byType": {
+        "browser": 2.06,
+        "renderer": 4.72,
+        "GPU": 3.05,
+        "network.mojom.NetworkService": 0.05,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 2.71,
+       "ScriptDuration": 0.68,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.92,
+       "stepsPerS": 4.99,
+       "rafPerS": 59.88,
+       "pageT": [
+        10522,
+        20544
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": 1.46
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 5.18,
+       "tabPid": 18876,
+       "otherRenderers": 0,
+       "gpu": 3.31,
+       "all": 9.05,
+       "byType": {
+        "browser": 0.56,
+        "renderer": 5.18,
+        "GPU": 3.31,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.05,
+       "ScriptDuration": 0.71,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.28,
+       "stepsPerS": 4.99,
+       "rafPerS": 59.82,
+       "pageT": [
+        20547,
+        30561
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": 2.1
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 5.13,
+       "tabPid": 18876,
+       "otherRenderers": 0,
+       "gpu": 3.38,
+       "all": 9.25,
+       "byType": {
+        "browser": 0.71,
+        "renderer": 5.13,
+        "GPU": 3.38,
+        "network.mojom.NetworkService": 0.03,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.11,
+       "ScriptDuration": 0.78,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.2,
+       "stepsPerS": 5,
+       "rafPerS": 59.46,
+       "pageT": [
+        30565,
+        40572
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": 1.83
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 90.2,
+      "privMB": 34.9
+     },
+     "gpuMem": [
+      {
+       "wsMB": 150.8,
+       "privMB": 130.4
+      }
+     ],
+     "dashText": [
+      "",
+      "                                                                                        ██ ████    █  █ ████    ████ ████",
+      "                                                                                         █ █  █   ■█  █ █  █   ■█    █",
+      "                                                                                         █ █  █    ████ ████    ████ ████",
+      "                                                                                         █ █  █   ■   █ █  █   ■   █    █",
+      "                                                                                         █ ████       █ ████    ████ ████",
+      "",
+      "                                                                           RAM   [███████████-------]  64.0%  10.0 GB / 15.7 GB",
+      "                                                                           DISK   456.6 GB total",
+      "",
+      "                                                                           CPU0  [██----------]  23.4%      CPU6  [█-----------]  11.1%",
+      "                                                                           CPU1  [------------]   7.7%      CPU7  [------------]   5.6%",
+      "                                                                           CPU2  [███---------]  26.2%      CPU8  [------------]   0.0%",
+      "                                                                           CPU3  [██----------]  24.6%      CPU9  [------------]   0.0%",
+      "                                                                           CPU4  [------------]   6.3%      CPU10 [------------]   0.0%",
+      "                                                                           CPU5  [------------]   4.7%      CPU11 [------------]   0.0%",
+      "",
+      " ═ BROWSER (REPORTED BY THE BROWSER) ═════════════════════════════════════════════════",
+      " Chrome: 155",
+      " OS: Windows",
+      " Cores: 12",
+      " JS heap: 2 / 4192 MB",
+      " Network: 4g 1.45 Mbps 0 ms",
+      " Battery: 67 % (discharging)",
+      " Language: es-ES",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "dashNoIpc": {
+     "info": {
+      "mode": "dashboard",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 13,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.02,
+       "tab": 4.95,
+       "tabPid": 19272,
+       "otherRenderers": 0,
+       "gpu": 2.92,
+       "all": 8.28,
+       "byType": {
+        "browser": 0.39,
+        "renderer": 4.95,
+        "GPU": 2.92,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.01,
+       "ScriptDuration": 0.82,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.5,
+       "stepsPerS": 4.99,
+       "rafPerS": 59.49,
+       "pageT": [
+        10517,
+        20536
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 3.68,
+       "tabPid": 19272,
+       "otherRenderers": 0.02,
+       "gpu": 2.14,
+       "all": 7.38,
+       "byType": {
+        "browser": 1.38,
+        "renderer": 3.7,
+        "GPU": 2.14,
+        "network.mojom.NetworkService": 0.15,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 2.04,
+       "ScriptDuration": 0.49,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.98,
+       "stepsPerS": 4.3,
+       "rafPerS": 48.36,
+       "pageT": [
+        20539,
+        30547
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 4.07,
+       "tabPid": 19272,
+       "otherRenderers": 0.01,
+       "gpu": 2.1,
+       "all": 7.04,
+       "byType": {
+        "browser": 0.7,
+        "renderer": 4.08,
+        "GPU": 2.1,
+        "network.mojom.NetworkService": 0.16,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 2.14,
+       "ScriptDuration": 0.52,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.19,
+       "stepsPerS": 5,
+       "rafPerS": 59.76,
+       "pageT": [
+        30551,
+        40557
+       ],
+       "sysCalls": {
+        "cpu": 10,
+        "mem": 10,
+        "sto": 10,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 88.5,
+      "privMB": 32.8
+     },
+     "gpuMem": [
+      {
+       "wsMB": 153.9,
+       "privMB": 133.5
+      }
+     ],
+     "dashText": [
+      "",
+      "                                                                                        ██ ████    █  █ ████    ████ ████",
+      "                                                                                         █ █  █   ■█  █ █  █   ■   █ █  █",
+      "                                                                                         █ █  █    ████ ████    ████ ████",
+      "                                                                                         █ █  █   ■   █    █   ■   █ █  █",
+      "                                                                                         █ ████       █ ████    ████ ████",
+      "",
+      "                                                                           RAM   [███████████-------]  64.1%  10.1 GB / 15.7 GB",
+      "                                                                           DISK   456.6 GB total",
+      "",
+      "                                                                           CPU0  [------------]   0.0%      CPU6  [------------]   0.0%",
+      "                                                                           CPU1  [------------]   0.0%      CPU7  [------------]   0.0%",
+      "                                                                           CPU2  [------------]   0.0%      CPU8  [------------]   0.0%",
+      "                                                                           CPU3  [------------]   0.0%      CPU9  [------------]   0.0%",
+      "                                                                           CPU4  [------------]   0.0%      CPU10 [------------]   0.0%",
+      "                                                                           CPU5  [------------]   0.0%      CPU11 [------------]   0.0%",
+      "",
+      " ═ BROWSER (REPORTED BY THE BROWSER) ═════════════════════════════════════════════════",
+      " Chrome: 155",
+      " OS: Windows",
+      " Cores: 12",
+      " JS heap: 2 / 4192 MB",
+      " Network: 4g 1.65 Mbps 0 ms",
+      " Battery: 67 % (discharging)",
+      " Language: es-ES",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "compile_sim": {
+     "info": {
+      "mode": "compile_sim",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.02,
+       "tab": 6.31,
+       "tabPid": 19072,
+       "otherRenderers": 0,
+       "gpu": 5.68,
+       "all": 25.26,
+       "byType": {
+        "browser": 12.57,
+        "renderer": 6.31,
+        "GPU": 5.68,
+        "network.mojom.NetworkService": 0.69,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.69,
+       "ScriptDuration": 1.28,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.15,
+       "stepsPerS": 30.05,
+       "rafPerS": 60.01,
+       "pageT": [
+        10532,
+        20548
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 7.91,
+       "tabPid": 19072,
+       "otherRenderers": 0,
+       "gpu": 7.19,
+       "all": 16.37,
+       "byType": {
+        "browser": 1.24,
+        "renderer": 7.91,
+        "GPU": 7.19,
+        "network.mojom.NetworkService": 0.03,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.86,
+       "ScriptDuration": 1.31,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.92,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.74,
+       "pageT": [
+        20552,
+        30563
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 6.53,
+       "tabPid": 19072,
+       "otherRenderers": 0,
+       "gpu": 5.95,
+       "all": 12.89,
+       "byType": {
+        "browser": 0.4,
+        "renderer": 6.54,
+        "GPU": 5.95,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 3.5,
+       "ScriptDuration": 1.27,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.97,
+       "stepsPerS": 29.96,
+       "rafPerS": 59.73,
+       "pageT": [
+        30568,
+        40579
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 6.58,
+       "tabPid": 19072,
+       "otherRenderers": 0.06,
+       "gpu": 8.39,
+       "all": 15.94,
+       "byType": {
+        "browser": 0.86,
+        "renderer": 6.64,
+        "GPU": 8.39,
+        "network.mojom.NetworkService": 0.03,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 4.03,
+       "ScriptDuration": 1.32,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.02,
+       "stepsPerS": 30.07,
+       "rafPerS": 59.64,
+       "pageT": [
+        40582,
+        50592
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 89.2,
+      "privMB": 33.6
+     },
+     "gpuMem": [
+      {
+       "wsMB": 154.7,
+       "privMB": 134.1
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "fire": {
+     "info": {
+      "mode": "fire",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 70,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 9.61,
+       "tabPid": 7916,
+       "otherRenderers": 0,
+       "gpu": 11.1,
+       "all": 21.17,
+       "byType": {
+        "browser": 0.44,
+        "renderer": 9.61,
+        "GPU": 11.1,
+        "network.mojom.NetworkService": 0.02,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 6.75,
+       "ScriptDuration": 3.86,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.56,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.64,
+       "pageT": [
+        10525,
+        20533
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 9.68,
+       "tabPid": 7916,
+       "otherRenderers": 0,
+       "gpu": 11.16,
+       "all": 21.14,
+       "byType": {
+        "browser": 0.29,
+        "renderer": 9.68,
+        "GPU": 11.16,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 6.62,
+       "ScriptDuration": 3.79,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.22,
+       "stepsPerS": 30.05,
+       "rafPerS": 59.69,
+       "pageT": [
+        20537,
+        30559
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 9.54,
+       "tabPid": 7916,
+       "otherRenderers": 0,
+       "gpu": 10.54,
+       "all": 20.5,
+       "byType": {
+        "browser": 0.4,
+        "renderer": 9.55,
+        "GPU": 10.54,
+        "network.mojom.NetworkService": 0.02,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 6.77,
+       "ScriptDuration": 3.91,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.96,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.64,
+       "pageT": [
+        30564,
+        40574
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.03,
+       "tab": 10.05,
+       "tabPid": 7916,
+       "otherRenderers": 0,
+       "gpu": 11.93,
+       "all": 22.32,
+       "byType": {
+        "browser": 0.33,
+        "renderer": 10.05,
+        "GPU": 11.93,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 7,
+       "ScriptDuration": 3.98,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.02,
+       "stepsPerS": 30.02,
+       "rafPerS": 59.64,
+       "pageT": [
+        40578,
+        50604
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 88.4,
+      "privMB": 33.8
+     },
+     "gpuMem": [
+      {
+       "wsMB": 155,
+       "privMB": 134.1
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "pacman": {
+     "info": {
+      "mode": "pacman",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 8.88,
+       "tabPid": 18472,
+       "otherRenderers": 0,
+       "gpu": 10,
+       "all": 19.39,
+       "byType": {
+        "browser": 0.44,
+        "renderer": 8.89,
+        "GPU": 10,
+        "network.mojom.NetworkService": 0.06,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 5.87,
+       "ScriptDuration": 2.78,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.83,
+       "stepsPerS": 30.06,
+       "rafPerS": 60.02,
+       "pageT": [
+        10516,
+        20531
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 8.57,
+       "tabPid": 18472,
+       "otherRenderers": 0,
+       "gpu": 9.71,
+       "all": 18.77,
+       "byType": {
+        "browser": 0.38,
+        "renderer": 8.57,
+        "GPU": 9.71,
+        "network.mojom.NetworkService": 0.11,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 5.72,
+       "ScriptDuration": 2.65,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.22,
+       "stepsPerS": 29.96,
+       "rafPerS": 59.62,
+       "pageT": [
+        20536,
+        30549
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 8.64,
+       "tabPid": 18472,
+       "otherRenderers": 0,
+       "gpu": 10.08,
+       "all": 18.85,
+       "byType": {
+        "browser": 0.11,
+        "renderer": 8.64,
+        "GPU": 10.08,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 5.52,
+       "ScriptDuration": 2.55,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.96,
+       "stepsPerS": 30.06,
+       "rafPerS": 59.82,
+       "pageT": [
+        30552,
+        40565
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 7.76,
+       "tabPid": 18472,
+       "otherRenderers": 0,
+       "gpu": 8.51,
+       "all": 17.55,
+       "byType": {
+        "browser": 1.25,
+        "renderer": 7.76,
+        "GPU": 8.51,
+        "network.mojom.NetworkService": 0.03,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 5.1,
+       "ScriptDuration": 2.41,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.02,
+       "stepsPerS": 29.96,
+       "rafPerS": 59.62,
+       "pageT": [
+        40568,
+        50583
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 89.2,
+      "privMB": 33.9
+     },
+     "gpuMem": [
+      {
+       "wsMB": 154.7,
+       "privMB": 134.1
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "synthwave": {
+     "info": {
+      "mode": "synthwave",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 8.34,
+       "tabPid": 8056,
+       "otherRenderers": 0,
+       "gpu": 12.49,
+       "all": 21.04,
+       "byType": {
+        "browser": 0.2,
+        "renderer": 8.34,
+        "GPU": 12.49,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.88,
+       "ScriptDuration": 1.99,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.52,
+       "stepsPerS": 29.97,
+       "rafPerS": 59.93,
+       "pageT": [
+        10528,
+        20539
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 8.39,
+       "tabPid": 8056,
+       "otherRenderers": 0,
+       "gpu": 12.78,
+       "all": 21.49,
+       "byType": {
+        "browser": 0.18,
+        "renderer": 8.39,
+        "GPU": 12.78,
+        "network.mojom.NetworkService": 0.13,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 5,
+       "ScriptDuration": 1.91,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.21,
+       "stepsPerS": 30.04,
+       "rafPerS": 59.98,
+       "pageT": [
+        20542,
+        30563
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 8.04,
+       "tabPid": 8056,
+       "otherRenderers": 0,
+       "gpu": 11.93,
+       "all": 20.44,
+       "byType": {
+        "browser": 0.44,
+        "renderer": 8.04,
+        "GPU": 11.93,
+        "network.mojom.NetworkService": 0.03,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 4.63,
+       "ScriptDuration": 1.87,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 0.95,
+       "stepsPerS": 29.97,
+       "rafPerS": 60.05,
+       "pageT": [
+        30567,
+        40577
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "rendMem": {
+      "wsMB": 89.9,
+      "privMB": 35.7
+     },
+     "gpuMem": [
+      {
+       "wsMB": 155.3,
+       "privMB": 134.5
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    }
+   },
+   "profileRemoved": false
+  }
+ ],
+ "shotsAndHidden": [
+  {
+   "label": "S1",
+   "order": [
+    "synthwave",
+    "compile_sim",
+    "pacman_install",
+    "dashboard",
+    "pacman",
+    "mario",
+    "pacmanHidden",
+    "marioHidden",
+    "dashboardHidden"
+   ],
+   "pid": 7760,
+   "profile": "C:/ntmeas/S1-gum5r",
+   "scen": {
+    "synthwave": {
+     "info": {
+      "mode": "synthwave",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [],
+     "shots": [
+      {
+       "file": "synthwave.png",
+       "bytes": 38786
+      },
+      {
+       "file": "synthwave-2.png",
+       "bytes": 38652
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "compile_sim": {
+     "info": {
+      "mode": "compile_sim",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [],
+     "shots": [
+      {
+       "file": "compile_sim.png",
+       "bytes": 101284
+      },
+      {
+       "file": "compile_sim-2.png",
+       "bytes": 101483
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "pacman_install": {
+     "info": {
+      "mode": "pacman_install",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 72,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [],
+     "shots": [
+      {
+       "file": "pacman_install.png",
+       "bytes": 45775
+      },
+      {
+       "file": "pacman_install-2.png",
+       "bytes": 42169
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "dashboard": {
+     "info": {
+      "mode": "dashboard",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 13,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [],
+     "shots": [
+      {
+       "file": "dashboard.png",
+       "bytes": 36709
+      },
+      {
+       "file": "dashboard-2.png",
+       "bytes": 36631
+      }
+     ],
+     "dashText": [
+      "",
+      "                                                                                        ██ ████    ████ ████    ████ ████",
+      "                                                                                         █ █  █   ■   █ █  █   ■█    █",
+      "                                                                                         █ █  █    ████ ████    ████ ████",
+      "                                                                                         █ █  █   ■█       █   ■   █    █",
+      "                                                                                         █ ████    ████ ████    ████ ████",
+      "",
+      "                                                                           RAM   [██████████--------]  60.6%  9.5 GB / 15.7 GB",
+      "                                                                           DISK   456.6 GB total",
+      "",
+      "                                                                           CPU0  [█-----------]  15.6%      CPU6  [------------]   0.0%",
+      "                                                                           CPU1  [█-----------]  10.9%      CPU7  [------------]   0.0%",
+      "                                                                           CPU2  [------------]   6.2%      CPU8  [█-----------]  14.5%",
+      "                                                                           CPU3  [------------]   4.5%      CPU9  [------------]   3.2%",
+      "                                                                           CPU4  [------------]   0.0%      CPU10 [------------]   8.1%",
+      "                                                                           CPU5  [------------]   0.0%      CPU11 [------------]   3.1%",
+      "",
+      " ═ BROWSER (REPORTED BY THE BROWSER) ═════════════════════════════════════════════════",
+      " Chrome: 155",
+      " OS: Windows",
+      " Cores: 12",
+      " JS heap: 3 / 4192 MB",
+      " Network: 4g 1.7 Mbps 50 ms",
+      " Battery: 73 % (discharging)",
+      " Language: es-ES",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "pacman": {
+     "info": {
+      "mode": "pacman",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [],
+     "shots": [
+      {
+       "file": "pacman.png",
+       "bytes": 31568
+      },
+      {
+       "file": "pacman-2.png",
+       "bytes": 31725
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "mario": {
+     "info": {
+      "mode": "mario",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      }
+     },
+     "wins": [],
+     "shots": [
+      {
+       "file": "mario.png",
+       "bytes": 20032
+      },
+      {
+       "file": "mario-2.png",
+       "bytes": 18916
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "pacmanHidden": {
+     "info": {
+      "mode": "pacman",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      },
+      "visAfter": "hidden",
+      "visEnd": "hidden"
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 0.02,
+       "tabPid": 10052,
+       "otherRenderers": 0.04,
+       "gpu": 0.23,
+       "all": 0.77,
+       "byType": {
+        "browser": 0.46,
+        "renderer": 0.07,
+        "GPU": 0.23,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 0.02,
+       "ScriptDuration": 0,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.75,
+       "stepsPerS": 0,
+       "rafPerS": 0,
+       "pageT": [
+        9106,
+        19117
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 0.01,
+       "tabPid": 10052,
+       "otherRenderers": 0,
+       "gpu": 0.01,
+       "all": 0.27,
+       "byType": {
+        "browser": 0.25,
+        "renderer": 0.01,
+        "GPU": 0.01,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 0,
+       "ScriptDuration": 0,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.75,
+       "stepsPerS": 0,
+       "rafPerS": 0,
+       "pageT": [
+        19121,
+        29128
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "visibleSys": {
+      "cpu": 0,
+      "mem": 0,
+      "sto": 0,
+      "ms": 0,
+      "n": 0,
+      "stub": false
+     },
+     "rendMem": {
+      "wsMB": 87.3,
+      "privMB": 36.8
+     },
+     "gpuMem": [
+      {
+       "wsMB": 157.2,
+       "privMB": 136.7
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "marioHidden": {
+     "info": {
+      "mode": "mario",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 73,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      },
+      "visAfter": "hidden",
+      "visEnd": "hidden"
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 0.04,
+       "tabPid": 18980,
+       "otherRenderers": 0.03,
+       "gpu": 0.17,
+       "all": 0.79,
+       "byType": {
+        "browser": 0.49,
+        "renderer": 0.07,
+        "GPU": 0.17,
+        "network.mojom.NetworkService": 0.06,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 0.03,
+       "ScriptDuration": 0,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.77,
+       "stepsPerS": 0,
+       "rafPerS": 0,
+       "pageT": [
+        9124,
+        19134
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.01,
+       "tab": 0.01,
+       "tabPid": 18980,
+       "otherRenderers": 0,
+       "gpu": 0.01,
+       "all": 0.44,
+       "byType": {
+        "browser": 0.4,
+        "renderer": 0.01,
+        "GPU": 0.01,
+        "network.mojom.NetworkService": 0.01,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 0.01,
+       "ScriptDuration": 0,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.77,
+       "stepsPerS": 0,
+       "rafPerS": 0,
+       "pageT": [
+        19139,
+        29154
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "visibleSys": {
+      "cpu": 0,
+      "mem": 0,
+      "sto": 0,
+      "ms": 0,
+      "n": 0,
+      "stub": false
+     },
+     "rendMem": {
+      "wsMB": 86.2,
+      "privMB": 36.1
+     },
+     "gpuMem": [
+      {
+       "wsMB": 159.3,
+       "privMB": 138.4
+      }
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    },
+    "dashboardHidden": {
+     "info": {
+      "mode": "dashboard",
+      "vis": "visible",
+      "iw": 1904,
+      "ih": 928,
+      "dpr": 1,
+      "cw": 1899,
+      "ch": 928,
+      "steps": 13,
+      "sysErr": null,
+      "bounds": {
+       "left": -1920,
+       "top": 0,
+       "width": 1920,
+       "height": 1080,
+       "windowState": "normal"
+      },
+      "visAfter": "hidden",
+      "visEnd": "hidden"
+     },
+     "wins": [
+      {
+       "dt": 10.01,
+       "tab": 0.04,
+       "tabPid": 10620,
+       "otherRenderers": 0.04,
+       "gpu": 0.18,
+       "all": 0.53,
+       "byType": {
+        "browser": 0.26,
+        "renderer": 0.08,
+        "GPU": 0.18,
+        "network.mojom.NetworkService": 0,
+        "storage.mojom.StorageService": 0
+       },
+       "TaskDuration": 0.03,
+       "ScriptDuration": 0,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.62,
+       "stepsPerS": 0,
+       "rafPerS": 0,
+       "pageT": [
+        9081,
+        19089
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      },
+      {
+       "dt": 10.02,
+       "tab": 0.02,
+       "tabPid": 10620,
+       "otherRenderers": 0.05,
+       "gpu": 0.02,
+       "all": 11.99,
+       "byType": {
+        "browser": 11.31,
+        "renderer": 0.07,
+        "GPU": 0.02,
+        "network.mojom.NetworkService": 0.58,
+        "storage.mojom.StorageService": 0.01
+       },
+       "TaskDuration": 0.01,
+       "ScriptDuration": 0,
+       "LayoutDuration": 0,
+       "RecalcStyleDuration": 0,
+       "heapMB": 1.63,
+       "stepsPerS": 0,
+       "rafPerS": 0,
+       "pageT": [
+        19093,
+        29111
+       ],
+       "sysCalls": {
+        "cpu": 0,
+        "mem": 0,
+        "sto": 0,
+        "msPerCall": null
+       }
+      }
+     ],
+     "visibleSys": {
+      "cpu": 6,
+      "mem": 6,
+      "sto": 6,
+      "ms": 70.70000000018626,
+      "n": 18,
+      "stub": false
+     },
+     "rendMem": {
+      "wsMB": 89.7,
+      "privMB": 38.5
+     },
+     "gpuMem": [
+      {
+       "wsMB": 163.4,
+       "privMB": 143.3
+      }
+     ],
+     "dashText": [
+      "",
+      "                                                                                        ██ ████    ████   ██    ████ ████",
+      "                                                                                         █ █  █   ■   █    █   ■█    █",
+      "                                                                                         █ █  █    ████    █    ████ ████",
+      "                                                                                         █ █  █   ■   █    █   ■   █    █",
+      "                                                                                         █ ████    ████    █    ████ ████",
+      "",
+      "                                                                           RAM   [██████████--------]  60.8%  9.5 GB / 15.7 GB",
+      "                                                                           DISK   456.6 GB total",
+      "",
+      "                                                                           CPU0  [------------]   4.8%      CPU6  [------------]   3.2%",
+      "                                                                           CPU1  [█-----------]  15.9%      CPU7  [------------]   1.6%",
+      "                                                                           CPU2  [██----------]  20.3%      CPU8  [------------]   0.0%",
+      "                                                                           CPU3  [------------]   4.7%      CPU9  [------------]   0.0%",
+      "                                                                           CPU4  [------------]   6.3%      CPU10 [------------]   0.0%",
+      "                                                                           CPU5  [------------]   4.7%      CPU11 [------------]   0.0%",
+      "",
+      " ═ BROWSER (REPORTED BY THE BROWSER) ═════════════════════════════════════════════════",
+      " Chrome: 155",
+      " OS: Windows",
+      " Cores: 12",
+      " JS heap: 2 / 4192 MB",
+      " Network: 4g 1.5 Mbps 50 ms",
+      " Battery: 72 % (discharging)",
+      " Language: es-ES",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "console": [
+      "info: [newtab] renderer: gl (ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11))"
+     ]
+    }
+   },
+   "profileRemoved": false
+  }
+ ],
+ "fidelity": {
+  "gpu": {
+   "devices": [
+    [
+     "",
+     "Intel(R) UHD Graphics",
+     "32.0.101.7085"
+    ],
+    [
+     "",
+     "Microsoft Basic Render Driver",
+     "10.0.26100.9278"
+    ]
+   ],
+   "glRenderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A721) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.101.7085)"
+  },
+  "bounds": {
+   "left": -1920,
+   "top": 0,
+   "width": 1920,
+   "height": 1080,
+   "windowState": "normal"
+  },
+  "verify": {
+   "seed": 12345,
+   "results": [
+    {
+     "mode": "synthwave",
+     "grid": "211x58",
+     "grid2d": "211x58",
+     "canvas": "1899x928",
+     "frames": 600,
+     "checkpoints": 15,
+     "max": 0,
+     "over2": 0,
+     "worst": null,
+     "offenders": {},
+     "triples": 38,
+     "skipped": 0,
+     "afterInvalidate": {
+      "max": 0,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 38,
+      "pages": 1,
+      "max": 0,
+      "over2": 0,
+      "offenders": {},
+      "required": []
+     },
+     "glyphs": " *AEHINORSTVWYZ─│═╱╲█",
+     "nonAscii": [
+      "─U+2500",
+      "│U+2502",
+      "═U+2550",
+      "╱U+2571",
+      "╲U+2572",
+      "█U+2588"
+     ],
+     "fgCount": 20,
+     "bgList": [
+      "0"
+     ],
+     "atlasSlots": 20
+    },
+    {
+     "mode": "compile_sim",
+     "grid": "211x58",
+     "grid2d": "211x58",
+     "canvas": "1899x928",
+     "frames": 1800,
+     "checkpoints": 36,
+     "max": 0,
+     "over2": 0,
+     "worst": null,
+     "offenders": {},
+     "triples": 254,
+     "skipped": 284,
+     "afterInvalidate": {
+      "max": 0,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 254,
+      "pages": 1,
+      "max": 0,
+      "over2": 0,
+      "offenders": {},
+      "required": []
+     },
+     "glyphs": " \"%&'(),-./0123456789:;=>ABCDEFLPTW[]^_`abcdefghijklmnopqrstuvwxyz|█",
+     "nonAscii": [
+      "█U+2588"
+     ],
+     "fgCount": 7,
+     "bgList": [
+      "0"
+     ],
+     "atlasSlots": 67
+    },
+    {
+     "mode": "pacman_install",
+     "grid": "211x58",
+     "grid2d": "211x58",
+     "canvas": "1899x928",
+     "frames": 1500,
+     "checkpoints": 32,
+     "max": 0,
+     "over2": 0,
+     "worst": null,
+     "offenders": {},
+     "triples": 203,
+     "skipped": 128,
+     "afterInvalidate": {
+      "max": 0,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 203,
+      "pages": 1,
+      "max": 0,
+      "over2": 0,
+      "offenders": {},
+      "required": []
+     },
+     "glyphs": " !#%()-./0123456789:?ABCDIMNPRSTUY[]abcdefghiklmnopqrstuvwxyz",
+     "nonAscii": [],
+     "fgCount": 6,
+     "bgList": [
+      "0"
+     ],
+     "atlasSlots": 60
+    },
+    {
+     "mode": "dashboard",
+     "grid": "211x58",
+     "grid2d": "211x58",
+     "canvas": "1899x928",
+     "frames": 400,
+     "checkpoints": 11,
+     "max": 0,
+     "over2": 0,
+     "worst": null,
+     "offenders": {},
+     "triples": 137,
+     "skipped": 0,
+     "afterInvalidate": {
+      "max": 0,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 137,
+      "pages": 1,
+      "max": 0,
+      "over2": 0,
+      "offenders": {},
+      "required": []
+     },
+     "glyphs": " %()-./0123456789:ABCDEGHIJKLMNOPRSTUWY[]abcdeghiklmnoprstuwy═█■",
+     "nonAscii": [
+      "═U+2550",
+      "█U+2588",
+      "■U+25a0"
+     ],
+     "fgCount": 8,
+     "bgList": [
+      "0"
+     ],
+     "atlasSlots": 63
+    },
+    {
+     "mode": "pacman",
+     "grid": "211x58",
+     "grid2d": "211x58",
+     "canvas": "1899x928",
+     "frames": 1500,
+     "checkpoints": 33,
+     "max": 0,
+     "over2": 0,
+     "worst": null,
+     "offenders": {},
+     "triples": 77,
+     "skipped": 10,
+     "afterInvalidate": {
+      "max": 0,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 155,
+      "pages": 1,
+      "max": 0,
+      "over2": 0,
+      "offenders": {},
+      "required": [
+       [
+        "ᗤ",
+        true
+       ],
+       [
+        "ᗢ",
+        true
+       ],
+       [
+        "ᗧ",
+        true
+       ],
+       [
+        "ᗣ",
+        true
+       ],
+       [
+        "ᗛ",
+        true
+       ],
+       [
+        "⍛",
+        true
+       ]
+      ]
+     },
+     "glyphs": " -0123456789:ACDEGILMNOPRSTUVWs·ᗛᗢᗣᗤᗧ⍛═█●",
+     "nonAscii": [
+      "·U+b7",
+      "ᗛU+15db",
+      "ᗢU+15e2",
+      "ᗣU+15e3",
+      "ᗤU+15e4",
+      "ᗧU+15e7",
+      "⍛U+235b",
+      "═U+2550",
+      "█U+2588",
+      "●U+25cf"
+     ],
+     "fgCount": 14,
+     "bgList": [
+      "0"
+     ],
+     "atlasSlots": 40
+    },
+    {
+     "mode": "mario",
+     "grid": "211x58",
+     "grid2d": "211x58",
+     "canvas": "1899x928",
+     "frames": 1500,
+     "checkpoints": 33,
+     "max": 1,
+     "over2": 0,
+     "worst": {
+      "frame": 0,
+      "max": 1,
+      "over2": 0,
+      "nonzero": 2873,
+      "offenders": []
+     },
+     "offenders": {},
+     "triples": 76,
+     "skipped": 1,
+     "afterInvalidate": {
+      "max": 1,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 340,
+      "pages": 1,
+      "max": 1,
+      "over2": 0,
+      "offenders": {},
+      "required": [
+       [
+        "▄",
+        true
+       ],
+       [
+        "▀",
+        true
+       ],
+       [
+        "█",
+        true
+       ],
+       [
+        "░",
+        true
+       ],
+       [
+        "◢",
+        true
+       ],
+       [
+        "◣",
+        true
+       ]
+      ]
+     },
+     "glyphs": " &-012345679?ACDEGIJLMNOPRSTUVW[]x|│║▀▄█░●◢◣",
+     "nonAscii": [
+      "│U+2502",
+      "║U+2551",
+      "▀U+2580",
+      "▄U+2584",
+      "█U+2588",
+      "░U+2591",
+      "●U+25cf",
+      "◢U+25e2",
+      "◣U+25e3"
+     ],
+     "fgCount": 12,
+     "bgList": [
+      "#5c94fc",
+      "#c84c0c",
+      "#000000"
+     ],
+     "atlasSlots": 43
+    },
+    {
+     "mode": "synthwave",
+     "grid": "40x20",
+     "grid2d": "40x20",
+     "canvas": "360x320",
+     "frames": 600,
+     "checkpoints": 15,
+     "max": 0,
+     "over2": 0,
+     "worst": null,
+     "offenders": {},
+     "triples": 28,
+     "skipped": 0,
+     "afterInvalidate": {
+      "max": 0,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 28,
+      "pages": 1,
+      "max": 0,
+      "over2": 0,
+      "offenders": {},
+      "required": []
+     },
+     "glyphs": " *AEHINORSTVWYZ─│═╱╲█",
+     "nonAscii": [
+      "─U+2500",
+      "│U+2502",
+      "═U+2550",
+      "╱U+2571",
+      "╲U+2572",
+      "█U+2588"
+     ],
+     "fgCount": 10,
+     "bgList": [
+      "0"
+     ],
+     "atlasSlots": 20
+    },
+    {
+     "mode": "compile_sim",
+     "grid": "40x20",
+     "grid2d": "40x20",
+     "canvas": "360x320",
+     "frames": 1800,
+     "checkpoints": 36,
+     "max": 0,
+     "over2": 0,
+     "worst": null,
+     "offenders": {},
+     "triples": 234,
+     "skipped": 288,
+     "afterInvalidate": {
+      "max": 0,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 234,
+      "pages": 1,
+      "max": 0,
+      "over2": 0,
+      "offenders": {},
+      "required": []
+     },
+     "glyphs": " \"%'()-./0123456789:;=>ABCDEFLPTW[]^_`abcdefghijklmnopqrstuvwxyz|█",
+     "nonAscii": [
+      "█U+2588"
+     ],
+     "fgCount": 7,
+     "bgList": [
+      "0"
+     ],
+     "atlasSlots": 65
+    },
+    {
+     "mode": "pacman_install",
+     "grid": "40x20",
+     "grid2d": "40x20",
+     "canvas": "360x320",
+     "frames": 1500,
+     "checkpoints": 32,
+     "max": 0,
+     "over2": 0,
+     "worst": null,
+     "offenders": {},
+     "triples": 192,
+     "skipped": 130,
+     "afterInvalidate": {
+      "max": 0,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 192,
+      "pages": 1,
+      "max": 0,
+      "over2": 0,
+      "offenders": {},
+      "required": []
+     },
+     "glyphs": " #()-./0123456789:?ABCDIMNPRSTUY[]abcdefghiklmnopqrstuvwxyz",
+     "nonAscii": [],
+     "fgCount": 6,
+     "bgList": [
+      "0"
+     ],
+     "atlasSlots": 58
+    },
+    {
+     "mode": "dashboard",
+     "grid": "40x20",
+     "grid2d": "40x20",
+     "canvas": "360x320",
+     "frames": 400,
+     "checkpoints": 11,
+     "max": 0,
+     "over2": 0,
+     "worst": null,
+     "offenders": {},
+     "triples": 69,
+     "skipped": 0,
+     "afterInvalidate": {
+      "max": 0,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 69,
+      "pages": 1,
+      "max": 0,
+      "over2": 0,
+      "offenders": {},
+      "required": []
+     },
+     "glyphs": " %-.0123456789ABCDGIKMPRSU[]alot█■",
+     "nonAscii": [
+      "█U+2588",
+      "■U+25a0"
+     ],
+     "fgCount": 7,
+     "bgList": [
+      "0"
+     ],
+     "atlasSlots": 33
+    },
+    {
+     "mode": "pacman",
+     "grid": "40x20",
+     "grid2d": "40x20",
+     "canvas": "360x320",
+     "frames": 1500,
+     "checkpoints": 33,
+     "max": 0,
+     "over2": 0,
+     "worst": null,
+     "offenders": {},
+     "triples": 76,
+     "skipped": 9,
+     "afterInvalidate": {
+      "max": 0,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 154,
+      "pages": 1,
+      "max": 0,
+      "over2": 0,
+      "offenders": {},
+      "required": [
+       [
+        "ᗤ",
+        true
+       ],
+       [
+        "ᗢ",
+        true
+       ],
+       [
+        "ᗧ",
+        true
+       ],
+       [
+        "ᗣ",
+        true
+       ],
+       [
+        "ᗛ",
+        true
+       ],
+       [
+        "⍛",
+        true
+       ]
+      ]
+     },
+     "glyphs": " -0123456789:ACEGILMNOPRSTUVWs·ᗛᗢᗣᗤᗧ⍛═█●",
+     "nonAscii": [
+      "·U+b7",
+      "ᗛU+15db",
+      "ᗢU+15e2",
+      "ᗣU+15e3",
+      "ᗤU+15e4",
+      "ᗧU+15e7",
+      "⍛U+235b",
+      "═U+2550",
+      "█U+2588",
+      "●U+25cf"
+     ],
+     "fgCount": 14,
+     "bgList": [
+      "0"
+     ],
+     "atlasSlots": 39
+    },
+    {
+     "mode": "mario",
+     "grid": "40x20",
+     "grid2d": "40x20",
+     "canvas": "360x320",
+     "frames": 1500,
+     "checkpoints": 33,
+     "max": 1,
+     "over2": 0,
+     "worst": {
+      "frame": 0,
+      "max": 1,
+      "over2": 0,
+      "nonzero": 705,
+      "offenders": []
+     },
+     "offenders": {},
+     "triples": 70,
+     "skipped": 5,
+     "afterInvalidate": {
+      "max": 1,
+      "over2": 0
+     },
+     "synthetic": {
+      "combos": 334,
+      "pages": 1,
+      "max": 1,
+      "over2": 0,
+      "offenders": {},
+      "required": [
+       [
+        "▄",
+        true
+       ],
+       [
+        "▀",
+        true
+       ],
+       [
+        "█",
+        true
+       ],
+       [
+        "░",
+        true
+       ],
+       [
+        "◢",
+        true
+       ],
+       [
+        "◣",
+        true
+       ]
+      ]
+     },
+     "glyphs": " &-012346?ACDEGIJLMNOPRSTUVW[]x|│║▀▄█░●◢◣",
+     "nonAscii": [
+      "│U+2502",
+      "║U+2551",
+      "▀U+2580",
+      "▄U+2584",
+      "█U+2588",
+      "░U+2591",
+      "●U+25cf",
+      "◢U+25e2",
+      "◣U+25e3"
+     ],
+     "fgCount": 12,
+     "bgList": [
+      "#5c94fc",
+      "#c84c0c",
+      "#000000"
+     ],
+     "atlasSlots": 40
+    }
+   ]
+  },
+  "seconds": 0.024,
+  "events": []
+ }
+}
