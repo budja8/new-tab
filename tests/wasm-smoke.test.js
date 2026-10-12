@@ -132,6 +132,24 @@ test('pacman: se activa y dibuja el HUD, el laberinto y a Pac-Man', opts, async 
   engine.free();
 });
 
+test('mario: se activa y dibuja el HUD, el cielo, el suelo y el pie', opts, async () => {
+  const { mod, wasm } = await load();
+  const engine = new mod.Engine(1, 80, 24);
+  assert.equal(engine.set_animation('mario'), true);
+  for (let i = 0; i < 5; i++) engine.step();
+  const cells = new Uint32Array(wasm.memory.buffer, engine.cells_ptr(), engine.cells_len());
+  const hud = 'MARIO  000000';
+  for (let i = 0; i < hud.length; i++) assert.equal(cells[(1 * 80 + 3 + i) * 3], hud.codePointAt(i));
+  const footer = 'AUTOPILOT ACTIVE | JUMPING & STOMPING';
+  for (let i = 0; i < footer.length; i++) assert.equal(cells[(23 * 80 + 21 + i) * 3], footer.codePointAt(i));
+  const SKY = 0xff5c94fc;
+  assert.equal(cells[(10 * 80 + 0) * 3 + 2], SKY >>> 0);
+  const seen = new Set();
+  for (let i = 0; i < cells.length; i += 3) seen.add(cells[i]);
+  assert.ok(seen.has(0x2591), 'ningún ladrillo ░');
+  engine.free();
+});
+
 test('dashboard: feed/feed_text alimentan el reloj, las barras y el panel', opts, async () => {
   const { mod, wasm } = await load();
   const engine = new mod.Engine(1, 100, 30);

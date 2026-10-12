@@ -69,6 +69,13 @@ test('pacman_install es un modo válido', () => {
   assert.equal(normalizeSettings({ mode: 'pacman_install' }).mode, 'pacman_install');
 });
 
+test('mario es un modo válido, después de pacman y antes de image', () => {
+  assert.ok(MODES.includes('mario'));
+  assert.ok(MODES.indexOf('pacman') < MODES.indexOf('mario'));
+  assert.ok(MODES.indexOf('mario') < MODES.indexOf('image'));
+  assert.equal(normalizeSettings({ mode: 'mario' }).mode, 'mario');
+});
+
 test('pacman es un modo válido, antes de image', () => {
   assert.ok(MODES.includes('pacman'));
   assert.ok(MODES.indexOf('pacman') < MODES.indexOf('image'));
