@@ -7,7 +7,7 @@ Extensión de Chrome (Manifest V3) que reemplaza la pestaña nueva por un fondo 
 ## Qué hace
 
 - **Fondos animados** (portados de otros proyectos en Rust):
-  `fire` (Fuego), `rain` (Lluvia), `starfield` (Campo de estrellas), `pipes` (Tuberías), `dna` (ADN), `synthwave`, `compile_sim` (Compilación), `pacman_install` (Instalación de pacman), `dashboard` (Panel de sistema) y `pacman` (Pac-Man).
+  `fire` (Fuego), `rain` (Lluvia), `starfield` (Campo de estrellas), `pipes` (Tuberías), `dna` (ADN), `synthwave`, `compile_sim` (Compilación), `pacman_install` (Instalación de pacman), `dashboard` (Panel de sistema), `pacman` (Pac-Man) y `mario`.
 - **Imagen ASCII**: eliges una imagen y se guarda convertida en el navegador (IndexedDB), a color y estática.
 - **Panel de KPI de teclas**: teclas más usadas, atajos, ritmo de escritura. Solo cuenta nombres de teclas (nunca el texto escrito) y omite los campos de contraseña. Se activa y desactiva con la tecla `K`.
 - **Panel de sistema** (`dashboard`): reloj, RAM, CPU por núcleo y datos del navegador, a partir de `chrome.system.*` y de lo que reporta el navegador.
@@ -39,7 +39,7 @@ Luego, en Chrome:
 | `npm run test:js` | Solo las pruebas de Node (`node --test`). |
 | `npm run check:size` | Falla si el `.wasm` pasa de 150 KB o JS+CSS+HTML pasa de 70 KB. |
 
-Tamaños a la fecha: `.wasm` 80.1 KB y JS+CSS+HTML 59.8 KB.
+Tamaños a la fecha: `.wasm` 87.8 KB y JS+CSS+HTML 59.9 KB.
 
 ## Estructura
 
@@ -49,7 +49,7 @@ core/                       Núcleo Rust → WASM (crate newtab-core)
   src/grid.rs, rng.rs       Cuadrícula de celdas [carácter, color de texto, color de fondo] y generador pseudoaleatorio propio
   src/ascii.rs              Conversión imagen → ASCII
   src/animation/*.rs        Una animación por archivo (fire, rain, starfield, pipes, dna, synthwave,
-                            compile_sim, pacman_install, dashboard, pacman)
+                            compile_sim, pacman_install, dashboard, pacman, mario)
 extension/                  La extensión (carpeta que se carga en Chrome)
   manifest.json, newtab.*   Pestaña nueva (HTML, CSS, JS principal)
   background.js, content/   Service worker y content scripts del conteo de teclas
